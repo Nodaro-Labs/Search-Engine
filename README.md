@@ -22,22 +22,23 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/nodaro-labs/repo-name.git
 cd repo-name
-
+```
 ## Development Workflow
 
 - **Never commit directly to `main`**
 - Create a new branch for your work:
   ```bash
   git checkout -b feature/your-feature-name
-
+  
 ## Commit Changes
-
+```bash
 git add .
 git commit -m "Brief description of change"
-
+```
 ## Push
+```bash
 git push origin feature/your-feature-name
-
-##Open a Pull Request on GitHub
+```
+## Open a Pull Request on GitHub
 
 
