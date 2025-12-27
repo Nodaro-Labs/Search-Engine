@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+
+/* Design System - Hardware Project Search Engine */
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 20% 96%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 30 15% 94%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 25 90% 95%;
+    --accent-foreground: 25 95% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-rainbow: linear-gradient(
+      90deg,
+      hsl(0 85% 60%) 0%,
+      hsl(25 95% 55%) 20%,
+      hsl(45 95% 55%) 40%,
+      hsl(140 70% 45%) 60%,
+      hsl(200 85% 55%) 80%,
+      hsl(280 70% 60%) 100%
+    );
+    
+    --gradient-rainbow-subtle: linear-gradient(
+      90deg,
+      hsl(0 85% 60% / 0.3) 0%,
+      hsl(25 95% 55% / 0.3) 20%,
+      hsl(45 95% 55% / 0.3) 40%,
+      hsl(140 70% 45% / 0.3) 60%,
+      hsl(200 85% 55% / 0.3) 80%,
+      hsl(280 70% 60% / 0.3) 100%
+    );
+
+    --shadow-soft: 0 4px 20px -4px hsl(25 50% 50% / 0.12);
+    --shadow-elevated: 0 8px 40px -8px hsl(25 50% 50% / 0.18);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 30 10% 95%;
+
+    --card: 30 10% 10%;
+    --card-foreground: 30 10% 95%;
+
+    --popover: 30 10% 10%;
+    --popover-foreground: 30 10% 95%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 30 10% 90%;
+
+    --muted: 30 10% 18%;
+    --muted-foreground: 30 10% 60%;
+
+    --accent: 25 40% 18%;
+    --accent-foreground: 25 95% 70%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 25 95% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .rainbow-border {
+    background: var(--gradient-rainbow);
+  }
+  
+  .rainbow-text {
+    background: var(--gradient-rainbow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
