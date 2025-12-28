@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+
+qdrant-client
+
+sentence-transformers
+torch
+
+scikit-learn
+numpy
