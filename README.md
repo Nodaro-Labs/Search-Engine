@@ -42,3 +42,33 @@ git push origin feature/your-feature-name
 ## Open a Pull Request on GitHub
 
 
+### Environment Setup
+
+Copy the example environment file and fill in credentials
+
+```bash
+cp .env.example .env
+```
+## Setup Instructions
+
+### 1. Create a Python virtual environment
+From the project root:
+
+```bash
+python3 -m venv .venv
+```
+MacOS / Linux
+```bash
+source .venv/bin/activate
+```
+
+Windows
+```bash
+.venv\Scripts\activate
+```
+
+## Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
