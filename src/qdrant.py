@@ -16,9 +16,7 @@ from qdrant_client.models import (
 
 load_dotenv()
 
-# --------------------
 # Config
-# --------------------
 COLLECTION_NAME = "projects"
 
 QDRANT_URL = os.getenv("QDRANT_URL")
@@ -27,17 +25,13 @@ QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 if not QDRANT_URL or not QDRANT_API_KEY:
     raise ValueError("Missing QDRANT_URL or QDRANT_API_KEY env vars")
 
-# --------------------
 # Qdrant client
-# --------------------
 client = QdrantClient(
     url=QDRANT_URL,
     api_key=QDRANT_API_KEY,
 )
 
-# --------------------
 # Recreate collection (HYBRID)
-# --------------------
 client.recreate_collection(
     collection_name=COLLECTION_NAME,
     vectors_config={
@@ -51,17 +45,13 @@ client.recreate_collection(
     },
 )
 
-print("✅ Collection recreated")
+print("Collection recreated")
 
-# --------------------
 # Load data
-# --------------------
 with open("projects.json", "r") as f:
     projects = json.load(f)
 
-# --------------------
 # Models
-# --------------------
 dense_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 texts_for_sparse = [
@@ -72,9 +62,7 @@ texts_for_sparse = [
 sparse_vectorizer = TfidfVectorizer(stop_words="english")
 sparse_matrix = sparse_vectorizer.fit_transform(texts_for_sparse)
 
-# --------------------
 # Build points
-# --------------------
 points = []
 
 for idx, project in enumerate(projects):
@@ -103,12 +91,10 @@ for idx, project in enumerate(projects):
         )
     )
 
-# --------------------
 # Upload
-# --------------------
 client.upsert(
     collection_name=COLLECTION_NAME,
     points=points,
 )
 
-print(f"🚀 Ingested {len(points)} projects into Qdrant Cloud")
+print(f"Ingested {len(points)} projects into Qdrant Cloud")
