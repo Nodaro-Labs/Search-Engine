@@ -2,68 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@fontsource/outfit/400.css";
-@import "@fontsource/outfit/500.css";
-@import "@fontsource/outfit/600.css";
-@import "@fontsource/outfit/700.css";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;500;600;700;900&display=swap');
 
-/* Design System - Hardware Project Search Engine */
+/* Retro Arcade Design System - NODARO */
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 30 10% 15%;
+    /* Retro Arcade Dark Theme */
+    --background: 0 0% 5%;
+    --foreground: 180 100% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
+    --card: 0 0% 8%;
+    --card-foreground: 180 100% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 180 100% 90%;
 
-    --primary: 25 95% 53%;
-    --primary-foreground: 0 0% 100%;
+    /* Neon Cyan Primary */
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 30 20% 96%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 180 100% 80%;
 
-    --muted: 30 15% 94%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 180 50% 60%;
 
-    --accent: 25 90% 95%;
-    --accent-foreground: 25 95% 40%;
+    /* Neon Accent Colors */
+    --accent: 280 100% 50%;
+    --accent-foreground: 180 100% 90%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 100% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 90%;
-    --input: 30 15% 90%;
-    --ring: 25 95% 53%;
+    --border: 180 50% 20%;
+    --input: 180 50% 15%;
+    --ring: 180 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom tokens */
-    --gradient-rainbow: linear-gradient(
+    /* Retro Arcade Gradients */
+    --gradient-neon: linear-gradient(
       90deg,
-      hsl(0 85% 60%) 0%,
-      hsl(25 95% 55%) 20%,
-      hsl(45 95% 55%) 40%,
-      hsl(140 70% 45%) 60%,
-      hsl(200 85% 55%) 80%,
-      hsl(280 70% 60%) 100%
+      hsl(180 100% 50%) 0%,
+      hsl(200 100% 60%) 25%,
+      hsl(280 100% 60%) 50%,
+      hsl(320 100% 60%) 75%,
+      hsl(180 100% 50%) 100%
     );
     
-    --gradient-rainbow-subtle: linear-gradient(
-      90deg,
-      hsl(0 85% 60% / 0.3) 0%,
-      hsl(25 95% 55% / 0.3) 20%,
-      hsl(45 95% 55% / 0.3) 40%,
-      hsl(140 70% 45% / 0.3) 60%,
-      hsl(200 85% 55% / 0.3) 80%,
-      hsl(280 70% 60% / 0.3) 100%
+    --gradient-cyan: linear-gradient(
+      135deg,
+      hsl(180 100% 40%) 0%,
+      hsl(200 100% 50%) 50%,
+      hsl(180 100% 60%) 100%
     );
 
-    --shadow-soft: 0 4px 20px -4px hsl(25 50% 50% / 0.12);
-    --shadow-elevated: 0 8px 40px -8px hsl(25 50% 50% / 0.18);
+    /* Neon Glow Shadows */
+    --shadow-neon-cyan: 0 0 20px hsl(180 100% 50% / 0.5),
+                        0 0 40px hsl(180 100% 50% / 0.3),
+                        0 0 60px hsl(180 100% 50% / 0.2);
+    --shadow-neon-purple: 0 0 20px hsl(280 100% 60% / 0.5),
+                         0 0 40px hsl(280 100% 60% / 0.3);
+    --shadow-arcade: 0 8px 32px rgba(0, 0, 0, 0.8),
+                     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -121,21 +123,129 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Outfit', system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    /* CRT Scanline Effect */
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.03) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(0, 255, 255, 0.03) 3px
+      );
+    background-size: 100% 4px;
   }
 }
 
 @layer utilities {
-  .rainbow-border {
-    background: var(--gradient-rainbow);
+  /* Retro Arcade Utilities */
+  .arcade-title {
+    font-family: 'Press Start 2P', monospace;
+    text-shadow: 
+      0 0 10px hsl(180 100% 50%),
+      0 0 20px hsl(180 100% 50%),
+      0 0 30px hsl(180 100% 50%),
+      0 0 40px hsl(180 100% 50%);
+    color: hsl(180 100% 60%);
+    letter-spacing: 0.1em;
   }
-  
-  .rainbow-text {
-    background: var(--gradient-rainbow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+
+  .arcade-subtitle {
+    font-family: 'Orbitron', monospace;
+    text-shadow: 0 0 10px currentColor;
+    letter-spacing: 0.2em;
+  }
+
+  .arcade-button {
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    position: relative;
+  }
+
+  .arcade-button::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-neon);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+    filter: blur(8px);
+  }
+
+  .arcade-button:hover::before {
+    opacity: 0.7;
+  }
+
+  .neon-glow {
+    box-shadow: var(--shadow-neon-cyan);
+  }
+
+  .neon-glow-purple {
+    box-shadow: var(--shadow-neon-purple);
+  }
+
+  .arcade-border {
+    border: 3px solid hsl(180 100% 50%);
+    box-shadow: 
+      inset 0 0 10px hsl(180 100% 50% / 0.3),
+      0 0 20px hsl(180 100% 50% / 0.5);
+  }
+
+  .crt-scanlines {
+    position: relative;
+  }
+
+  .crt-scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0px,
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .pixel-text {
+    font-family: 'Press Start 2P', monospace;
+    image-rendering: pixelated;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 
+        0 0 10px hsl(180 100% 50%),
+        0 0 20px hsl(180 100% 50%),
+        0 0 30px hsl(180 100% 50%);
+    }
+    to {
+      text-shadow: 
+        0 0 20px hsl(180 100% 50%),
+        0 0 30px hsl(180 100% 50%),
+        0 0 40px hsl(180 100% 50%),
+        0 0 50px hsl(180 100% 50%);
+    }
   }
 
   .animate-float {
@@ -147,7 +257,11 @@
     50% { transform: translateY(-10px); }
   }
 
-  .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* Grid Background */
+  .arcade-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
