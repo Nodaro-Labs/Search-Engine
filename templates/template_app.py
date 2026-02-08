@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
@@ -7,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)  
 
 COLLECTION_NAME = "projects"
 QDRANT_URL = os.getenv("QDRANT_URL")
@@ -36,18 +38,36 @@ def search_projects(query: str, limit: int = 5):
     return projects
 
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    projects = []
-    query = ""
+@app.route("/api/search", methods=["GET", "POST"])
+def search():
+    """REST API endpoint for search"""
+    if request.method == "GET":
+        query = request.args.get("q", "")
+        limit = int(request.args.get("limit", 10))
+    else:
+        data = request.get_json() or {}
+        query = data.get("query", "")
+        limit = data.get("limit", 10)
 
-    if request.method == "POST":
-        query = request.form.get("query")
-        if query:
-            projects = search_projects(query)
+    if not query:
+        return jsonify({"error": "Query parameter is required"}), 400
 
-    return render_template("results.html", projects=projects, query=query)
+    try:
+        projects = search_projects(query, limit=limit)
+        return jsonify({
+            "query": query,
+            "results": projects,
+            "count": len(projects)
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/health", methods=["GET"])
+def health():
+    """Health check endpoint"""
+    return jsonify({"status": "ok"})
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

@@ -1,12 +1,26 @@
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
+
+  const handleHintClick = (hint: string) => {
+    setQuery(hint);
+    navigate(`/search?q=${encodeURIComponent(hint)}`);
+  };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <form onSubmit={handleSearch} className="w-full max-w-2xl mx-auto">
       {/* Rainbow border wrapper */}
       <div
         className={`p-[2px] rounded-2xl transition-all duration-300 ${
@@ -33,6 +47,7 @@ const SearchBar = () => {
           />
           {query && (
             <button
+              type="button"
               onClick={() => setQuery("")}
               className="absolute right-5 text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -48,7 +63,8 @@ const SearchBar = () => {
           (hint) => (
             <button
               key={hint}
-              onClick={() => setQuery(hint)}
+              type="button"
+              onClick={() => handleHintClick(hint)}
               className="px-4 py-1.5 text-sm font-medium bg-accent text-accent-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
             >
               {hint}
@@ -56,7 +72,7 @@ const SearchBar = () => {
           )
         )}
       </div>
-    </div>
+    </form>
   );
 };
 

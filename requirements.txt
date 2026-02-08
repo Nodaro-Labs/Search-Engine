@@ -8,3 +8,7 @@ torch
 
 scikit-learn
 numpy
+
+flask
+flask-cors
+python-dotenv
