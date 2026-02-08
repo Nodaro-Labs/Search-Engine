@@ -1,248 +1,149 @@
-import {
-  Cpu,
-  Wrench,
-  Lightbulb,
-  Printer,
-  Bot,
-  Wifi,
-  Zap,
-  Users,
-  FolderOpen,
-} from "lucide-react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
+import { Search, Zap, Gamepad2, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
-import CategoryPill from "@/components/CategoryPill";
-import ProjectCard from "@/components/ProjectCard";
-import FloatingShapes from "@/components/FloatingShapes";
-
-const categories = [
-  { icon: Cpu, label: "Electronics", count: 2847 },
-  { icon: Printer, label: "3D Printing", count: 1523 },
-  { icon: Bot, label: "Robotics", count: 892 },
-  { icon: Wifi, label: "IoT", count: 1234 },
-  { icon: Lightbulb, label: "LED Projects", count: 567 },
-  { icon: Wrench, label: "Tools", count: 743 },
-];
-
-const featuredProjects = [
-  {
-    title: "Smart Home Weather Station",
-    description:
-      "Build your own IoT weather station with ESP32, featuring real-time monitoring and beautiful dashboard.",
-    category: "IoT",
-    likes: 342,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-    color: "hsl(200 85% 55%)",
-  },
-  {
-    title: "Mini CNC Plotter Machine",
-    description:
-      "A compact CNC plotter built from scratch using stepper motors and Arduino for precise drawings.",
-    category: "Robotics",
-    likes: 287,
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-    color: "hsl(25 95% 55%)",
-  },
-  {
-    title: "Mechanical Keyboard Build",
-    description:
-      "Custom 65% mechanical keyboard with hot-swappable switches and RGB underglow lighting.",
-    category: "Electronics",
-    likes: 521,
-    image:
-      "https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=400&h=300&fit=crop",
-    color: "hsl(280 70% 60%)",
-  },
-  {
-    title: "3D Printed Drone Frame",
-    description:
-      "Lightweight racing drone frame designed for FPV enthusiasts, optimized for strength and durability.",
-    category: "3D Printing",
-    likes: 198,
-    image:
-      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop",
-    color: "hsl(140 70% 45%)",
-  },
-  {
-    title: "Voice Controlled LED Matrix",
-    description:
-      "Interactive LED display that responds to voice commands using Raspberry Pi and Google Assistant.",
-    category: "LED Projects",
-    likes: 156,
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop",
-    color: "hsl(45 95% 55%)",
-  },
-  {
-    title: "Open Source Oscilloscope",
-    description:
-      "Build a fully functional digital oscilloscope with STM32 microcontroller and TFT display.",
-    category: "Tools",
-    likes: 423,
-    image:
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop",
-    color: "hsl(0 85% 60%)",
-  },
-];
-
-const stats = [
-  { icon: FolderOpen, value: "12,000+", label: "Projects" },
-  { icon: Users, value: "45,000+", label: "Makers" },
-  { icon: Zap, value: "500+", label: "Daily Searches" },
-];
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen bg-background relative">
-      <FloatingShapes />
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden crt-scanlines">
+      {/* Animated Grid Background */}
+      <div className="fixed inset-0 arcade-grid opacity-30 pointer-events-none"></div>
+
+      {/* Neon Corner Decorations */}
+      <div className="fixed top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-cyan-400 opacity-50"></div>
+      <div className="fixed top-0 right-0 w-32 h-32 border-r-4 border-t-4 border-cyan-400 opacity-50"></div>
+      <div className="fixed bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-cyan-400 opacity-50"></div>
+      <div className="fixed bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-cyan-400 opacity-50"></div>
+
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="container mx-auto px-4">
-          {/* Rainbow accent bar */}
-          <div className="w-24 h-1 mx-auto mb-8 rounded-full rainbow-border" />
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-foreground max-w-4xl mx-auto leading-tight">
-            Discover Your Next
-            <span className="block mt-2">
-              <span className="rainbow-text">Hardware</span> Project
-            </span>
-          </h1>
-
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto">
-            Search through thousands of open-source hardware projects,
-            components, and tutorials from makers around the world.
-          </p>
-
-          {/* Search Bar */}
-          <div className="mt-10 md:mt-12">
-            <SearchBar />
-          </div>
-
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12 md:mt-16">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <stat.icon size={20} className="text-primary" />
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-foreground">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-12 md:py-16 relative z-10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-            Browse by Category
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat, index) => (
-              <CategoryPill
-                key={cat.label}
-                icon={cat.icon}
-                label={cat.label}
-                count={cat.count}
-                isActive={index === 0}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects Section */}
-      <section className="py-12 md:py-20 relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Featured Projects
-              </h2>
-              <p className="mt-2 text-muted-foreground">
-                Handpicked projects from the community
-              </p>
-            </div>
-            <button className="text-primary font-medium hover:underline hidden md:block">
-              View all projects →
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
-          </div>
-
-          <div className="text-center mt-8 md:hidden">
-            <button className="text-primary font-medium hover:underline">
-              View all projects →
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="relative overflow-hidden rounded-2xl p-[2px] rainbow-border">
-            <div className="bg-card rounded-[14px] p-8 md:p-12 text-center">
-              <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-                Have a project to share?
-              </h2>
-              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-                Join our community of makers and share your hardware projects
-                with thousands of enthusiasts worldwide.
-              </p>
-              <button className="mt-8 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl shadow-soft hover:shadow-elevated transition-all duration-200 hover:-translate-y-0.5">
-                Submit Your Project
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Cpu className="text-primary-foreground" size={16} />
-              </div>
-              <span className="font-bold text-foreground">
-                Hard<span className="text-primary">Search</span>
-              </span>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Terms
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Contact
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              © 2024 HardSearch. Made with ♥
+      {/* Main Arcade Cabinet */}
+      <div className="container mx-auto px-4 pt-32 pb-16 relative z-10">
+        {/* Arcade Cabinet Frame */}
+        <div className="max-w-5xl mx-auto">
+          {/* Top Marquee */}
+          <div className="arcade-border bg-black/90 p-6 mb-8 text-center">
+            <h1 className="arcade-title text-4xl md:text-6xl mb-2 animate-glow">
+              NODARO
+            </h1>
+            <p className="arcade-subtitle text-cyan-400 text-sm md:text-lg">
+              HARDWARE PROJECT ARCADE
             </p>
           </div>
+
+          {/* Main Screen Area */}
+          <div className="arcade-border bg-gradient-to-b from-black via-[#0a0a0a] to-black p-8 md:p-12 relative">
+            {/* Screen Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              {/* Welcome Message */}
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <Sparkles className="w-8 h-8 text-cyan-400 animate-pulse" />
+                  <h2 className="arcade-subtitle text-2xl md:text-4xl text-cyan-300">
+                    WELCOME TO THE ARCADE
+                  </h2>
+                  <Sparkles className="w-8 h-8 text-cyan-400 animate-pulse" />
+                </div>
+                <p className="text-cyan-200/80 font-mono text-sm md:text-base max-w-2xl mx-auto">
+                  INSERT YOUR SEARCH QUERY TO BEGIN YOUR QUEST FOR OPEN-SOURCE HARDWARE PROJECTS
+                </p>
+              </div>
+
+              {/* Arcade Search Interface */}
+              <div className="mb-12">
+                <SearchBar />
+              </div>
+
+              {/* Quick Play Buttons */}
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+                {["Arduino", "Raspberry Pi", "3D Printing", "Robotics", "IoT"].map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => navigate(`/search?q=${encodeURIComponent(category)}`)}
+                    className="arcade-button px-4 py-6 bg-gradient-to-b from-cyan-500/20 to-purple-500/20 border-2 border-cyan-400 text-cyan-300 font-mono text-xs md:text-sm uppercase tracking-wider hover:neon-glow transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+                  >
+                    <span className="relative z-10">{category}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/30 to-cyan-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Stats Display */}
+              <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12">
+                {[
+                  { label: "PROJECTS", value: "12K+", icon: Gamepad2 },
+                  { label: "MAKERS", value: "45K+", icon: Zap },
+                  { label: "SEARCHES", value: "500+", icon: Search },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="arcade-border bg-black/50 p-6 text-center group hover:neon-glow transition-all duration-300"
+                  >
+                    <stat.icon className="w-8 h-8 mx-auto mb-3 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                    <div className="arcade-subtitle text-2xl md:text-3xl text-cyan-400 mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-cyan-500/70 font-mono text-xs uppercase tracking-wider">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Instructions */}
+              <div className="text-center">
+                <div className="inline-block arcade-border bg-black/70 p-6">
+                  <p className="text-cyan-300/80 font-mono text-xs md:text-sm">
+                    <span className="text-cyan-400">[SPACE]</span> TO SEARCH | 
+                    <span className="text-cyan-400"> [ENTER]</span> TO START | 
+                    <span className="text-cyan-400"> [ESC]</span> TO EXIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Control Panel */}
+          <div className="arcade-border bg-black/90 p-6 mt-8">
+            <div className="flex items-center justify-center gap-8">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+                <span className="text-cyan-400 font-mono text-xs">LIVE</span>
+              </div>
+              <div className="text-cyan-500/50 font-mono text-xs">
+                © 2024 NODARO ARCADE
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <span className="text-cyan-400 font-mono text-xs">ONLINE</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Floating Particles Effect */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${4 + Math.random() * 4}s`,
+              opacity: 0.3,
+            }}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };
