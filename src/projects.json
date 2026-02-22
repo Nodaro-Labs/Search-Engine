@@ -1,6 +1,6 @@
 [
   {
-    "title": "Qeteshpony/BreadBoard-Power",
+    "title": "Breadboard Power Supply Board",
     "summary": "Power supply board for solderless breadboards",
     "keywords": [
       "breadboard",
@@ -12,7 +12,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makerspet/kiddo",
+    "title": "Kiddo Companion Robot",
     "summary": "Kiddo companion robot",
     "keywords": [
       "open-source",
@@ -29,7 +29,7 @@
     "source": "GitHub"
   },
   {
-    "title": "joshumax/open-aim-assist",
+    "title": "Accessibility IMU Hardware for FPS Games",
     "summary": "Open source accessibility & IMU assistance hardware for FPSes such as Valorant",
     "keywords": [
       "open-source-hardware",
@@ -40,7 +40,7 @@
     "source": "GitHub"
   },
   {
-    "title": "mzollin/talisman",
+    "title": "Microchip Shortage Tribute Badge",
     "summary": "A tribute to the great microchip shortage of 2021",
     "keywords": [
       "pcb",
@@ -61,7 +61,7 @@
     "source": "GitHub"
   },
   {
-    "title": "emilio2601/alcool-v1",
+    "title": "Arduino-Powered Breathalyzer",
     "summary": "Open source breathalyzer - powered by Arduino!",
     "keywords": [
       "arduino",
@@ -73,7 +73,7 @@
     "source": "GitHub"
   },
   {
-    "title": "liu2g/mgms",
+    "title": "Modular Garden Monitoring System",
     "summary": "Modular Garden Monitoring System - Senior Design Project",
     "keywords": [
       "iot",
@@ -88,7 +88,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/Flipdot-Controller",
+    "title": "Lawo Flipdot Display Controller",
     "summary": "Replacement controller for a Lawo Luminator Flipdot Display",
     "keywords": [
       "hardware",
@@ -102,7 +102,7 @@
     "source": "GitHub"
   },
   {
-    "title": "OPEN-NEXT/D2.5-report",
+    "title": "Open!Next WP2 D2.5 Report",
     "summary": "Report for Open!Next WP2 D2.5.",
     "keywords": [
       "open-source",
@@ -113,7 +113,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/DocuBricks",
+    "title": "DocuBricks Documentation Format Editor",
     "summary": "DocuBricks is a documentation format that helps your open hardware project to greater modularity and reusability as all as a standardised, professional look. This repository contains the editor software that allows you to create or open DocuBricks XML files and edit them.",
     "keywords": [
       "open-source",
@@ -128,7 +128,7 @@
     "source": "GitHub"
   },
   {
-    "title": "dhivelabs/firewood-carrier",
+    "title": "Firewood Carrier",
     "summary": "",
     "keywords": [
       "makerspace",
@@ -142,7 +142,7 @@
     "source": "GitHub"
   },
   {
-    "title": "SilentWoof/Barkduino",
+    "title": "Barkduino Behavior-Driven Robot Companion",
     "summary": "Barkduino is a behavior-driven robot companion built on Arduino. It mimics dog-like gestures—sleeping, standing, waiting—without looking like a dog. Modular, expressive, and creatively designed, Barkduino is a playful robotics platform for gesture-based interaction and emotional feedback.",
     "keywords": [
       "arduino",
@@ -166,7 +166,7 @@
     "source": "GitHub"
   },
   {
-    "title": "seanpm2001/Camera-privacy-specification_Website",
+    "title": "Camera Privacy Specification Hardware",
     "summary": "🔏️📷️🔏️🌐️ The official source repository for the website of the Camera Privacy Specification project, a hardware specification for increasing privacy in all device cameras.",
     "keywords": [
       "website",
@@ -192,7 +192,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/tvarnish",
+    "title": "ST-4 Autoguider Breakout Board",
     "summary": "An open-source, ST-4 autoguider breakout board for simple Raspberry Pi and Arduino telescope mount control 🔭 🌌",
     "keywords": [
       "raspberry-pi",
@@ -209,7 +209,7 @@
     "source": "GitHub"
   },
   {
-    "title": "jvhardev303/usbhub3.2g1",
+    "title": "USB Hub 3.2 Gen 1",
     "summary": "USB Hub 3.2 Gen 1 for personal computers.",
     "keywords": [
       "hardware",
@@ -226,7 +226,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DIYHD/Site-web",
+    "title": "Hemp Decorticator",
     "summary": "",
     "keywords": [
       "open-source-ecology",
@@ -240,7 +240,7 @@
     "source": "GitHub"
   },
   {
-    "title": "diy-fluorometer/hardware",
+    "title": "DIY Fluorometer",
     "summary": "DIY Fluorometer initialized at #SHDB17",
     "keywords": [
       "diy",
@@ -252,7 +252,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Aightm8/Gravity-center-solar-tracker",
+    "title": "Gravity-Center Solar Tracker",
     "summary": "A novel solar tracker; cheaper, simpler and less power intensive than traditional systems",
     "keywords": [
       "open-source",
@@ -274,7 +274,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/osh-dir-std-rs",
+    "title": "OSH Directory Standard Tool",
     "summary": "Code that helps humans and machines deal with the OSH directory standard",
     "keywords": [
       "cli",
@@ -290,7 +290,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/agent1040",
+    "title": "Automated Indoor Farming Control System",
     "summary": "A scalable, open-source environmental control system using Arduino and Python for precision automated indoor farming.",
     "keywords": [
       "python",
@@ -314,7 +314,7 @@
     "source": "GitHub"
   },
   {
-    "title": "multiplanetaryhomestead/reprap-chinampa",
+    "title": "Self-Watering 3D-Printable Vegetable Pot",
     "summary": "Passive self-watering 3D-printable vegetable pot, inspired by the chinampa (floating garden bed)",
     "keywords": [
       "permaculture",
@@ -338,7 +338,7 @@
     "source": "GitHub"
   },
   {
-    "title": "muditbhargava66/NeoRAM",
+    "title": "Advanced SRAM Controller with ECC Support",
     "summary": "Advanced SRAM Controller with ECC Support for Sky130 Process - Production-Ready Multi-Port Memory System.",
     "keywords": [
       "fpga",
@@ -360,7 +360,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tjko/fan-test-adapter",
+    "title": "PWM Fan Test Adapter Board",
     "summary": "Adapter PCB board for easily testing PC (PWM) fans.",
     "keywords": [
       "pcb",
@@ -375,7 +375,7 @@
     "source": "GitHub"
   },
   {
-    "title": "medchedli/Protection-Mask-Laser-Cut-",
+    "title": "Laser Cut Face Shield",
     "summary": "Laser Cut Face Shield. For tunisian doctors and medical srtaff.",
     "keywords": [
       "lasercut",
@@ -391,7 +391,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ParagUnhale1998/Facebook-Basic-Login",
+    "title": "Basic Facebook Login Interface",
     "summary": "Here i Create A Basic Facebook Login Using Html , CSS and Javascript",
     "keywords": [
       "javascript",
@@ -412,7 +412,7 @@
     "source": "GitHub"
   },
   {
-    "title": "AlphaProMega/Aether-Shades-Open",
+    "title": "Aether Shades AR Glasses",
     "summary": "Open-source AR glasses that quietly reveal the truth. No implants. No lies. Just vision.",
     "keywords": [
       "privacy",
@@ -427,7 +427,7 @@
     "source": "GitHub"
   },
   {
-    "title": "NadicaSm/Arduino-workshop-EESTEC-Belgrade",
+    "title": "Arduino Workshop Presentation",
     "summary": "This is presentation (with two sample codes) for introductory lecture for Arduino workshop.",
     "keywords": [
       "arduino",
@@ -442,7 +442,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DaisyDriver/DaisyGUI-Enlightened",
+    "title": "3D Printable Microscope GUI",
     "summary": "GUI for a 3D printable open-source microscope",
     "keywords": [
       "raspberry-pi",
@@ -456,7 +456,7 @@
     "source": "GitHub"
   },
   {
-    "title": "CMB27/ModbusRTU-Test-Shield",
+    "title": "Modbus RTU Test Shield",
     "summary": "A shield for Arduino boards that provides an RS-485 transceiver, RS-232 transceiver, and a selection of buttons, lights, and knobs.",
     "keywords": [
       "arduino",
@@ -476,7 +476,7 @@
     "source": "GitHub"
   },
   {
-    "title": "universalgeek56/UG56-Lab-PSU",
+    "title": "Smart ESP32 Lab Power Supply",
     "summary": "Smart ESP32-based lab power supply — turns any DC-DC converter into a digitally controlled PSU with CV/CC modes, OLED UI, web dashboard, live graphs, and OTA updates. Open-source project by UniversalGeek56 ⚡",
     "keywords": [
       "iot",
@@ -498,7 +498,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/fm4dd",
+    "title": "I2C Crypto Auth PMOD",
     "summary": "1Mbit I2C CRYPTO AUTH PMOD ATECC508A",
     "keywords": [
       "crypto",
@@ -513,7 +513,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/OnanAgaba",
+    "title": "Soil Moisture Sensor Evaluation",
     "summary": "Field evaluation of four soil moisture sensors: low-cost and commercial options under arid conditions, with open-source code, low-cost electronics, and do-it-yourself (DIY) resources.",
     "keywords": [
       "open-source-hardware",
@@ -526,7 +526,7 @@
     "source": "GitHub"
   },
   {
-    "title": "biotexturas/HomeScope",
+    "title": "HomeScope Robotized Microscope",
     "summary": "An open microscope with a robotized XYZ stage 🔬",
     "keywords": [
       "open-source-hardware",
@@ -537,7 +537,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cnuahs/uno-rev3-breakout-shield",
+    "title": "Arduino UNO Breakout Shield",
     "summary": "Screw terminal breakout/prototyping shield for Arduino UNO Rev3/4.",
     "keywords": [
       "arduino",
@@ -552,7 +552,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/climatedisplay",
+    "title": "7-Segment Climate Display",
     "summary": "7-Segment Display with 4 blocks of 2x4 digits",
     "keywords": [
       "esp8266",
@@ -567,7 +567,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cocktailmixer/electronics",
+    "title": "Cocktailmixer Bot Electronics",
     "summary": "Custom electronics for the cocktailmixer bot",
     "keywords": [
       "kicad",
@@ -579,7 +579,7 @@
     "source": "GitHub"
   },
   {
-    "title": "zhangvicto/Hot-Belty",
+    "title": "Hot-Belty High Temperature 3D Printer",
     "summary": "Open-source high temperature conveyor belt 3d-printer",
     "keywords": [
       "robotics",
@@ -597,7 +597,7 @@
     "source": "GitHub"
   },
   {
-    "title": "nishiiba/Peghammer",
+    "title": "Peghammer Left-Hand Keyboard",
     "summary": "",
     "keywords": [
       "mechanical-keyboard",
@@ -613,7 +613,7 @@
     "source": "GitHub"
   },
   {
-    "title": "BryceWDesign/OpenCryoCore",
+    "title": "OpenCryoCore Urban Climate Control",
     "summary": "Distributed cryogenic air-cooling array using thermoelectric gradient modules for autonomous urban microclimate regulation. Non-refrigerant, compressor-free infrastructure engineered for extreme thermal environments.",
     "keywords": [
       "open-source-hardware",
@@ -642,7 +642,7 @@
     "source": "GitHub"
   },
   {
-    "title": "prometheus-science/prometheus-science.github.io",
+    "title": "Prometheus Science Website",
     "summary": "Prometheus Science Website",
     "keywords": [
       "open-hardware",
@@ -654,7 +654,7 @@
     "source": "GitHub"
   },
   {
-    "title": "rolypolytoy/lightning-in-a-bottle",
+    "title": "Lightning in a Bottle Amplifier",
     "summary": "The world's best charge sensitive amplifier",
     "keywords": [
       "kicad",
@@ -667,7 +667,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Resistive-Touch-Switch",
+    "title": "Resistive Touch Assistive Switch",
     "summary": "An open source assistive switch activated by minimal force skin contact.",
     "keywords": [
       "open-source",
@@ -684,7 +684,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Battery-Interrupter-Soldered",
+    "title": "Battery Interrupter for Toy Adaptation",
     "summary": "This low cost, low tech Battery Interrupter allows you to switch adapt a toy without altering any of the internal electronics.",
     "keywords": [
       "open-source-hardware",
@@ -697,7 +697,7 @@
     "source": "GitHub"
   },
   {
-    "title": "transistorfet/z280",
+    "title": "Z280 Single Board Computer",
     "summary": "A Single Board Computer with a Z280 CPU using the Z-BUS interface",
     "keywords": [
       "hardware",
@@ -715,7 +715,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/fm4dd",
+    "title": "BME280 PMOD Sensor Module",
     "summary": "PMOD module for the Bosch BME280 Temperature Humidity Pressure Sensor, connection over I2C.",
     "keywords": [
       "sensor",
@@ -732,7 +732,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/BratwurstPower",
+    "title": "BratwurstPower ADS-B Receiver PSU",
     "summary": "A power supply for a complete, Raspberry Pi based ADS-B Receiver Setup with independent power rails for the different components.",
     "keywords": [
       "raspberry-pi",
@@ -747,7 +747,7 @@
     "source": "GitHub"
   },
   {
-    "title": "mithi/bossy",
+    "title": "Bossy Controller Code Library",
     "summary": "🎮 Contains the code that can be used with Bossy controllers and derivatives 🎮",
     "keywords": [
       "arduino",
@@ -767,7 +767,7 @@
     "source": "GitHub"
   },
   {
-    "title": "kelu124/short_papers",
+    "title": "Short Papers for Zenodo",
     "summary": "Short papers for Zenodo",
     "keywords": [
       "open-source",
@@ -782,7 +782,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/LipSync",
+    "title": "LipSync Mouth-Operated Mouse",
     "summary": "An open-source mouth operated sip and puff joystick that enables people with limited hand function to emulate a mouse on their computer and/or smartphone.",
     "keywords": [
       "open-source",
@@ -804,7 +804,7 @@
     "source": "GitHub"
   },
   {
-    "title": "notforhire/small_engine_dyno",
+    "title": "Small Engine Dyno Build Guide",
     "summary": "This repository contains all of the information to build your own small engine dyno for a reasonable cost.",
     "keywords": [
       "arduino",
@@ -821,7 +821,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/FloaltController",
+    "title": "IKEA FLOALT LED Controller",
     "summary": "Custom controller for IKEA FLOALT LED panels",
     "keywords": [
       "led-controller",
@@ -837,7 +837,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Finger-Lift-Switch",
+    "title": "Finger-Lift Assistive Switch",
     "summary": "An open-source assistive switch that can be activated by small lifting motions of a finger.",
     "keywords": [
       "open-source",
@@ -852,7 +852,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Sip-And-Puff-Analog-Switch",
+    "title": "Analog Sip and Puff Switch",
     "summary": "An open source analog sip and puff assistive switch",
     "keywords": [
       "accessibility",
@@ -866,7 +866,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tetrabiodistributed/tetra-workspace",
+    "title": "Tetra Medical PPE Workspace",
     "summary": "Tetra workspace (Kasm image) for Medical/PPE Open-Source Hardware (OSHW) development",
     "keywords": [
       "open-source-hardware",
@@ -879,7 +879,7 @@
     "source": "GitHub"
   },
   {
-    "title": "linguini1/pygmy",
+    "title": "Pygmy RP2040 Flight Computer",
     "summary": "RP2040-based flight computer for rockets",
     "keywords": [
       "raspberrypi",
@@ -897,7 +897,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/therickyfoster",
+    "title": "Oral Biomechanical Engineering Framework",
     "summary": "Oral Biomechanical Engineering is an open, ethics-first research framework exploring how controlled biomechanics, sensing, and feedback can reduce unnecessary trauma and pain in dental interventions. Focused on force variability, tissue respect, and clinician-led safety—open science without self-harm or automation.",
     "keywords": [
       "open-science",
@@ -926,7 +926,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tinstructor/EHM",
+    "title": "Energy Harvester with Monitoring",
     "summary": "An energy harvester with advanced monitoring capabilities.",
     "keywords": [
       "pcb",
@@ -939,7 +939,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/Natsurii",
+    "title": "AC to DC Variable Power Supply",
     "summary": "An AC to DC variable voltage power supply.",
     "keywords": [
       "open-source-hardware"
@@ -949,7 +949,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ginbot86/DingoNM2eMMC",
+    "title": "DingoNM2eMMC Storage Adapter",
     "summary": "Use NM (Nano Memory) cards to convert soldered eMMC into swappable/upgradable storage.",
     "keywords": [
       "hardware",
@@ -968,7 +968,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/RotaryDial2Serial",
+    "title": "Rotary Dial to Serial Converter",
     "summary": "Translate signals from a phone rotary dial to serial data",
     "keywords": [
       "arduino",
@@ -982,7 +982,7 @@
     "source": "GitHub"
   },
   {
-    "title": "WVURAIL/os_radio_astro_hw",
+    "title": "Open Source Radio Astronomy Hardware",
     "summary": "Open source radio astronomy hardware",
     "keywords": [
       "radio-astronomy",
@@ -993,7 +993,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tjwieg/BikeChainguide",
+    "title": "Bike Chain Guide",
     "summary": "a simple, low-cost device to keep the chain from jumping off the front gear when shifting rear gears",
     "keywords": [
       "bicycle",
@@ -1006,7 +1006,7 @@
     "source": "GitHub"
   },
   {
-    "title": "LunNova/RecirculatingCarriageForTSlot",
+    "title": "T-Slot Ball Bearing Carriage",
     "summary": "Parametric Recirculating Ball Bearing Carriage for T-Slot extrusions",
     "keywords": [
       "hardware",
@@ -1020,7 +1020,7 @@
     "source": "GitHub"
   },
   {
-    "title": "linguini1/pygmy-gs",
+    "title": "PygmyGS Ground Station Software",
     "summary": "The ground station receive software for the Pygmy flight computer's sibling board: the PygmyGS",
     "keywords": [
       "python",
@@ -1037,7 +1037,7 @@
     "source": "GitHub"
   },
   {
-    "title": "gsuberland/open-network-ms",
+    "title": "Open Network-MS UPS Card",
     "summary": "Open-source hardware replacement for MGE / Eaton network cards, such as the Network-MS.",
     "keywords": [
       "hardware",
@@ -1051,7 +1051,7 @@
     "source": "GitHub"
   },
   {
-    "title": "OPEN-NEXT/wp2.2_frontend_dev",
+    "title": "Open!Next WP2.2 Dashboard",
     "summary": "Demo frontend implementation of Open!Next WP2.2 process facilitation dashboard.",
     "keywords": [
       "open-source",
@@ -1068,7 +1068,7 @@
     "source": "GitHub"
   },
   {
-    "title": "KayesAzam08/WiFi-Doorbell-Notifier-ESP8266-Telegram",
+    "title": "WiFi Doorbell with Telegram Notifications",
     "summary": "WiFi Doorbell Notifier using ESP8266 & Telegram A smart IoT doorbell system built with ESP8266 that sends instant Telegram alerts when someone presses the button. No extra cloud service needed — just Wi-Fi and your Telegram bot!",
     "keywords": [
       "home-automation",
@@ -1087,7 +1087,7 @@
     "source": "GitHub"
   },
   {
-    "title": "CMB27/Nano2UNO-Adapter-5V",
+    "title": "Nano to UNO 5V Adapter Board",
     "summary": "A circuit board to adapt 5V Arduino Nano boards the the Arduino UNO form factor.",
     "keywords": [
       "arduino",
@@ -1103,7 +1103,7 @@
     "source": "GitHub"
   },
   {
-    "title": "CovenantArchitects/The-Partnership-Covenant",
+    "title": "Partnership Covenant AI Framework",
     "summary": "Constitutional Framework for Aligned Super-Intelligence.",
     "keywords": [
       "open-hardware",
@@ -1131,7 +1131,7 @@
     "source": "GitHub"
   },
   {
-    "title": "AlphaProMega/Obsidian-Chip-Open",
+    "title": "Obsidian Chip AGI Accelerator Roadmap",
     "summary": "Open-source AGI accelerator silicon roadmap — 2026-2027 foundry-realistic. Ends the scaling war.",
     "keywords": [
       "agi",
@@ -1147,7 +1147,7 @@
     "source": "GitHub"
   },
   {
-    "title": "werediver/current-dr-amp",
+    "title": "Current Drive Headphone Amplifier",
     "summary": "A current drive headphone amplifier",
     "keywords": [
       "audio",
@@ -1164,7 +1164,7 @@
     "source": "GitHub"
   },
   {
-    "title": "axiopaladin/BC660K-LTE-Breakout",
+    "title": "BC660K LTE Breakout Board",
     "summary": "Open-source breakout board for the inexpensive BC660K modem by Quectel",
     "keywords": [
       "hardware",
@@ -1184,7 +1184,7 @@
     "source": "GitHub"
   },
   {
-    "title": "jtmaston/CIMPLC-Hardware",
+    "title": "CIMPLC Hardware Design",
     "summary": "Hardware design of the CIMPLC",
     "keywords": [
       "hardware",
@@ -1196,7 +1196,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/NTP-Server",
+    "title": "GPS NTP Server Raspberry Pi Hat",
     "summary": "Raspberry Pi Hat for a GPS driven NTP-Server",
     "keywords": [
       "raspberry-pi",
@@ -1211,7 +1211,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/crkbd",
+    "title": "Corne Split Keyboard",
     "summary": "Corne keyboard, a split keyboard with 3x6 column staggered keys and 3 thumb keys.",
     "keywords": [
       "open-source-hardware",
@@ -1224,7 +1224,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/osh-tool",
+    "title": "OSH Project Linting Tool",
     "summary": "A command line tool for Open Source Hardware (OSH) technical project linting (quality assessment).",
     "keywords": [
       "cli",
@@ -1241,7 +1241,7 @@
     "source": "GitHub"
   },
   {
-    "title": "anubhav-narayan/ProjectMX",
+    "title": "ProjectMX 8-Bit Machine",
     "summary": "Project Machine Extensible : The \"simple\" 8-bit machine",
     "keywords": [
       "cpu",
@@ -1255,7 +1255,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/fm4dd",
+    "title": "Raspberry Pi PMOD Adapter Board",
     "summary": "PMOD adapter interface board for the Raspberry Pi GPIO, adding 4 PMOD connectors to the system.",
     "keywords": [
       "raspberry-pi",
@@ -1270,7 +1270,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Pixtxa/TPIC6C-PCB",
+    "title": "TPIC6C596 Shift Register Breakout",
     "summary": "Breakout board for TPIC6C596 shift registers with 8x open drain output with neopixels as status leds.",
     "keywords": [
       "open-source",
@@ -1285,7 +1285,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/ESPFanController",
+    "title": "ESP32 PWM Fan Controller",
     "summary": "Control and monitor up to three PWM fans with an ESP32",
     "keywords": [
       "esp32",
@@ -1301,7 +1301,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Mayoogh/Project-DIY-Ventilator",
+    "title": "DIY Mechanical Ventilator",
     "summary": "Open-source mechanical ventilation system for patients",
     "keywords": [
       "open-source",
@@ -1317,7 +1317,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/MeditationBench",
+    "title": "Meditation Bench",
     "summary": "A simple Meditation seat, requireing only one size of planks (+ screws)",
     "keywords": [
       "open-source-hardware",
@@ -1329,7 +1329,7 @@
     "source": "GitHub"
   },
   {
-    "title": "azerimaker/olmBoard-RP605x",
+    "title": "RP605K Buck-Boost Converter",
     "summary": "RP605K is a compact ultra-low-power buck-boost converter module with a built-in battery monitor. Vin: 1.8-5.5V and Vout: 3.3V up to 300mA",
     "keywords": [
       "hardware",
@@ -1344,7 +1344,7 @@
     "source": "GitHub"
   },
   {
-    "title": "FEASTorg/BREADS",
+    "title": "BREAD Data Acquisition Framework",
     "summary": "Open Source Framework for a Broadly Expandable and Reconfigurable Data Acquisition and Automation Device (BREAD)",
     "keywords": [
       "automation-framework",
@@ -1358,7 +1358,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ctranstrum/chuck",
+    "title": "Charlieflex Keyboard",
     "summary": "Repository for the Charlieflex keyboard",
     "keywords": [
       "keyboard",
@@ -1377,7 +1377,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Gonsukey/verilog-uhj",
+    "title": "Verilog-UHJ Circuit Simulation Framework",
     "summary": "🛠️ Streamline your hardware design with Verilog-UHJ, an efficient framework for creating and managing digital circuit simulations.",
     "keywords": [
       "fpga",
@@ -1401,7 +1401,7 @@
     "source": "GitHub"
   },
   {
-    "title": "epccs/Gravimetric",
+    "title": "Gravimetric Flow Meter Controller",
     "summary": "ATmega324pb controller board for gravimetric method flow meter and prover calibration",
     "keywords": [
       "avr",
@@ -1417,7 +1417,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ericsandbling/openModularLandVehicle",
+    "title": "Open Modular Land Vehicle Platform",
     "summary": "Enable sustainable and fair mobility on land using modular vehicles that brings minimal harm to peoples and planet and a vision for the next generations.",
     "keywords": [
       "vehicle",
@@ -1431,7 +1431,7 @@
     "source": "GitHub"
   },
   {
-    "title": "kimmy665/cores",
+    "title": "CoreS Admin Panel Template",
     "summary": "🚀 Build modern admin panels easily with CoreS, a responsive template using React, TypeScript, and Tailwind CSS. Perfect for streamlined web applications.",
     "keywords": [
       "audio",
@@ -1458,7 +1458,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tiberiucorbu/shed-lights",
+    "title": "Shed Lights Garden Project",
     "summary": "A diy weekend project for the garden lightning",
     "keywords": [
       "diy",
@@ -1470,7 +1470,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/OpenFabTN",
+    "title": "OpenFabTN Medical Face Shields",
     "summary": "[Work in progress] Tunisian Makers 3D-printing & Laser cutting face shields and other medical supplies to provide healthcare professionals with the protective gear that they need to stay safe!",
     "keywords": [
       "hardware",
@@ -1490,7 +1490,7 @@
     "source": "GitHub"
   },
   {
-    "title": "liwei3699/Ultrasonic-rangefinder-based-on-Arduino-development-board",
+    "title": "Ultrasonic Ranging Alarm System",
     "summary": "Ultrasonic ranging alarm system is built using open source hardware",
     "keywords": [
       "arduino-uno",
@@ -1502,7 +1502,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/yaemk-split-kb",
+    "title": "YAEMK Split Keyboard",
     "summary": "5x8 Split keyboard with thumb-clusters, rotary encoders and oleds.",
     "keywords": [
       "open-source-hardware",
@@ -1515,7 +1515,7 @@
     "source": "GitHub"
   },
   {
-    "title": "MohammadFarrah21/Baikal-Handwired-Split-Corne-Keyboard",
+    "title": "Baikal Handwired Split Keyboard",
     "summary": "⚙️ Build an affordable, beginner-friendly handwired split keyboard with step-by-step instructions and wireless functionality using the Pro Micro NRF52840.",
     "keywords": [
       "electronics",
@@ -1539,7 +1539,7 @@
     "source": "GitHub"
   },
   {
-    "title": "TheClaverOne/Pocket_PSU",
+    "title": "Pocket PSU Mini Power Supply",
     "summary": "🔋 Build a mini PSU that fits in your pocket, delivering adjustable voltage and current with safe charging and protection from any USB-C source.",
     "keywords": [
       "microcontroller",
@@ -1563,7 +1563,7 @@
     "source": "GitHub"
   },
   {
-    "title": "BobKerns/Altoid-Box-MIDI",
+    "title": "Altoid Box MIDI Controller",
     "summary": "A 3-knob MIDI controller with a display to fit in an Altoid box.",
     "keywords": [
       "open-source",
@@ -1581,7 +1581,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/LOSH-RDF",
+    "title": "LOSH RDF Data Format",
     "summary": "",
     "keywords": [
       "data",
@@ -1594,7 +1594,7 @@
     "source": "GitHub"
   },
   {
-    "title": "creare-com/OpenWater",
+    "title": "OpenWater Turbidity Meter",
     "summary": "Open-Source Turbidity Meter and Mobile App",
     "keywords": [
       "education",
@@ -1612,7 +1612,7 @@
     "source": "GitHub"
   },
   {
-    "title": "RhizomaticRobin/DexiGrab-Robot-Hand",
+    "title": "LibreGrabbe 16-DOF Robot Hand",
     "summary": "LibreGrabbe 16-DOF Robot Hand",
     "keywords": [
       "open-source",
@@ -1636,7 +1636,7 @@
     "source": "GitHub"
   },
   {
-    "title": "rolypolytoy/diffusion_pump",
+    "title": "Open Source Diffusion Pump",
     "summary": "Making an open-source diffusion pump to democratize high-vacuum technology",
     "keywords": [
       "open-source-hardware",
@@ -1647,7 +1647,7 @@
     "source": "GitHub"
   },
   {
-    "title": "GigaOhms/SENTSOR-ESP32WR32UE",
+    "title": "SENTSOR ESP32 PCB Learning Project",
     "summary": "Learn KiCad Through a ESP32-micro Compact PCB Design Project",
     "keywords": [
       "esp32",
@@ -1661,7 +1661,7 @@
     "source": "GitHub"
   },
   {
-    "title": "lemonforest/mlehaptics",
+    "title": "MLEHaptics Bilateral Stimulation Device",
     "summary": "Open-source bilateral stimulation technology for mental wellness and therapeutic applications. Professional-grade dual ESP32-C6 hardware with wireless Bluetooth Low Energy pairing and app-based control via GATT services. Cost-effective, reliable alternative to commercial devices for therapists, researchers, wellness practitioners, and self-care.",
     "keywords": [
       "esp32",
@@ -1678,7 +1678,7 @@
     "source": "GitHub"
   },
   {
-    "title": "epccs/RPUlux",
+    "title": "RPUlux LED Driver Controller",
     "summary": "ATmega328p controller board with PWM pins to six constant current LED drivers",
     "keywords": [
       "avr",
@@ -1694,7 +1694,7 @@
     "source": "GitHub"
   },
   {
-    "title": "flirbleoss/projector-screen-controller",
+    "title": "Motorized Projector Screen Controller",
     "summary": "Motorized Projector Screen Controller",
     "keywords": [
       "embedded",
@@ -1708,7 +1708,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DaisyDriver/DaisyGUI",
+    "title": "DaisyGUI Microscope Interface",
     "summary": "Graphical User Interface to the DaisyDriver. Includes motor control, camera preview feed and timed image capture",
     "keywords": [
       "raspberry-pi",
@@ -1722,7 +1722,7 @@
     "source": "GitHub"
   },
   {
-    "title": "vrstanchev/Fritzing-Projects",
+    "title": "Fritzing Projects Collection",
     "summary": "Fritzing-Projects",
     "keywords": [
       "gplv3",
@@ -1736,7 +1736,7 @@
     "source": "GitHub"
   },
   {
-    "title": "TheHackersWorkshop/eMenorah",
+    "title": "Electronic Menorah Project",
     "summary": "Electronic Menorah Project",
     "keywords": [
       "holiday",
@@ -1750,7 +1750,7 @@
     "source": "GitHub"
   },
   {
-    "title": "reverieim/voice",
+    "title": "Open Source AI Voice Companion",
     "summary": "Open-source AI voice companion speaker for real-time character conversations",
     "keywords": [
       "iot",
@@ -1764,7 +1764,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Vaughan-Peter/Arduino-Component-Projects",
+    "title": "Arduino Component Projects Collection",
     "summary": "A collection of Arduino projects demonstrating how to use various components and modules. Each project includes example code, wiring diagrams, notes, and optional demo videos to help beginners and hobbyists learn and experiment with Arduino electronics. I am open to collaboration and welcome contributions from others.",
     "keywords": [
       "open-source-hardware",
@@ -1779,7 +1779,7 @@
     "source": "GitHub"
   },
   {
-    "title": "skishida/MBH7BLZ02-breakout-board",
+    "title": "MBH7BLZ02 BLE Breakout Board",
     "summary": "MBH7BLZ02 BLE module breakout",
     "keywords": [
       "hardware",
@@ -1794,7 +1794,7 @@
     "source": "GitHub"
   },
   {
-    "title": "olivier-le-sage/windows-kmdf-u-wire",
+    "title": "Windows KMDF USB Driver",
     "summary": "Windows KMDF USB driver for u-wire firmware based hardware designs",
     "keywords": [
       "c",
@@ -1815,7 +1815,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Sussex-Neuroscience/odour-stimulator",
+    "title": "Odour Stimulator for Flies",
     "summary": "A system to present odour to flies",
     "keywords": [
       "open-science",
@@ -1828,7 +1828,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ODU-CGA-CubeSat/cubesat-cli",
+    "title": "CubeSat CLI Tool",
     "summary": "CLI tool for performing CRUD operations on bill of materials (BOM) data & assembly instructions data, using the dof-cubesat schema.",
     "keywords": [
       "command-line-tool",
@@ -1844,7 +1844,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Qeteshpony/MainsFrequencyMonitor",
+    "title": "Mains Frequency Monitor",
     "summary": "Single board solution to power an ESP32 and use it to measure the mains frequency through an optoisolator",
     "keywords": [
       "esp32",
@@ -1857,7 +1857,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/KORokoro-rOBOt-project",
+    "title": "KOROBO Robot Platform",
     "summary": "Open Source Hardware \"KOROBO (2-1 gen)\"",
     "keywords": [
       "robot",
@@ -1873,7 +1873,7 @@
     "source": "GitHub"
   },
   {
-    "title": "AbdelrahmanELsokary/3D_Printer",
+    "title": "Open Source 3D Printer with RAMPS",
     "summary": "Open-source 3D printer project based on Arduino Mega 2560 and RAMPS 1.6. Includes Marlin firmware configuration, hardware setup, slicer profiles, and automation scripts.",
     "keywords": [
       "javascript",
@@ -1902,7 +1902,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Skandakm29/uart_loopback",
+    "title": "UART Loopback on VSD FPGA",
     "summary": "Universal Asynchronous Receiver-Transmitter (UART) loopback on the VSD Squadcom Mini FPGA board",
     "keywords": [
       "vsd",
@@ -1917,7 +1917,7 @@
     "source": "GitHub"
   },
   {
-    "title": "sammcj/sammcj",
+    "title": "Sammcj Developer Profile",
     "summary": "",
     "keywords": [
       "bash",
@@ -1935,7 +1935,7 @@
     "source": "GitHub"
   },
   {
-    "title": "galopago/panel-mount-drill-layouts",
+    "title": "Panel Mount Drill Layouts",
     "summary": "Different \"drilling helpers\" for mounting diverse panel devices. Those templates can be produced in different media: paper or PCB.",
     "keywords": [
       "svg",
@@ -1952,7 +1952,7 @@
     "source": "GitHub"
   },
   {
-    "title": "chuangzhu/float-watch",
+    "title": "Float Watch POV Smart Watch",
     "summary": "⌚ A smart watch based on Persistence Of Vision.",
     "keywords": [
       "avr",
@@ -1968,7 +1968,7 @@
     "source": "GitHub"
   },
   {
-    "title": "LMSE/REVOLVER-protein-purifier",
+    "title": "REVOLVER Protein Purification System",
     "summary": "Repository for building and operating REVOLVER: An automatic protein purification system for gravity columns. Developed at the University of Toronto.",
     "keywords": [
       "arduino",
@@ -1981,7 +1981,7 @@
     "source": "GitHub"
   },
   {
-    "title": "sandra-konvex/ECHO_ENGINE",
+    "title": "ECHO ENGINE Sound Monitoring Device",
     "summary": "🎧 Dispositivo acessível para monitoramento sonoro em apoio à inclusão de crianças autistas",
     "keywords": [
       "audio",
@@ -2001,7 +2001,7 @@
     "source": "GitHub"
   },
   {
-    "title": "janc18/CAE32",
+    "title": "CAE32 Simracing Equipment",
     "summary": "Simracing equipment, including hardware, software, and firmware design.",
     "keywords": [
       "firmware",
@@ -2020,7 +2020,7 @@
     "source": "GitHub"
   },
   {
-    "title": "robotman2412/boa-risc-v",
+    "title": "BOA RISC-V CPU",
     "summary": "My second attempt at a RISC-V CPU with learnings form my previous attempt.",
     "keywords": [
       "cpu",
@@ -2033,7 +2033,7 @@
     "source": "GitHub"
   },
   {
-    "title": "balwantyadav1/Deauth-Guardian",
+    "title": "Deauth-Guardian WiFi Attack Detector",
     "summary": "🛡 Deauth-Guardian Real-time Wi-Fi Deauth Attack Detector using ESP8266 Detects deauth attacks with a buzzer + NeoPixel LED. 🔍 Plug & play, ultra-portable, and open-source. Perfect for hackers, testers, and Wi-Fi defenders. Flash it. Plug it. Protect your network.",
     "keywords": [
       "esp8266",
@@ -2053,7 +2053,7 @@
     "source": "GitHub"
   },
   {
-    "title": "bschulz1701/Cold-Silicon",
+    "title": "Cold Silicon Eagle Library",
     "summary": "Custom parts library for Eagle CAD assembled with varying degrees of part documentation (so sue me! Actually, please don't...). I hope others can be saved the pain and suffering of developing custom part layouts, and perhaps, one day, this will lead to a better world...",
     "keywords": [
       "open-source-hardware",
@@ -2064,7 +2064,7 @@
     "source": "GitHub"
   },
   {
-    "title": "stasiselectronics/8BitWiFiVisualizer",
+    "title": "8-Bit WiFi Visualizer",
     "summary": "Open Source Hardware project for a minimalist WiFi enabled 8 Bit visualizer. The included firmware displays the intensity of the packet stream for a particular AP channel, but feel free to remix the hardware or write your own firmware to bring new functionality!",
     "keywords": [
       "arduino",
@@ -2084,7 +2084,7 @@
     "source": "GitHub"
   },
   {
-    "title": "transistorfet/retroverse",
+    "title": "Retroverse VME Modular Computer",
     "summary": "A collection of VME-based hardware and software for modular computers",
     "keywords": [
       "modular",
@@ -2106,7 +2106,7 @@
     "source": "GitHub"
   },
   {
-    "title": "epccs/RPUno",
+    "title": "RPUno Controller Board",
     "summary": "ATmega328p general purpose controller board",
     "keywords": [
       "avr",
@@ -2121,7 +2121,7 @@
     "source": "GitHub"
   },
   {
-    "title": "UDXS/Arduitsy",
+    "title": "Arduitsy Tiny MCU Board",
     "summary": "A Tiny MCU board that can be programmed with an Arduino",
     "keywords": [
       "open-source",
@@ -2137,7 +2137,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Open-Rocker-Switch",
+    "title": "Open Rocker Assistive Switch",
     "summary": "An open source assistive switch activated by pressing down on either side or rocking the top relative to the base.",
     "keywords": [
       "open-source",
@@ -2156,7 +2156,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/FreedomWing",
+    "title": "FreedomWing Joystick Adapter",
     "summary": "Code, hardware, and documentation necessary to make the FreedomWing Joystick Adapter, a way to connect a powerchair joystick for adapted-gaming",
     "keywords": [
       "open-hardware",
@@ -2172,7 +2172,7 @@
     "source": "GitHub"
   },
   {
-    "title": "OPEN-NEXT/wp2.2_dev",
+    "title": "Open Source Development Dashboard",
     "summary": "Initial proof-of-concept of open source development (OSD) status dashboard with data-mining & visualisation components",
     "keywords": [
       "data-science",
@@ -2186,7 +2186,7 @@
     "source": "GitHub"
   },
   {
-    "title": "davidmalawey/OpenJar",
+    "title": "OpenJar 3D Printable Designs",
     "summary": "Open Source designs for jars & threaded parts",
     "keywords": [
       "functional",
@@ -2204,7 +2204,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Bernard2806/WemosD1-Drivers",
+    "title": "Wemos D1 Windows Drivers",
     "summary": "Repository with Windows drivers for the Wemos D1 board. Includes installation guide and resources for easy setup and integration with Arduino IDE.",
     "keywords": [
       "esp8266",
@@ -2223,7 +2223,7 @@
     "source": "GitHub"
   },
   {
-    "title": "valthera/openvalthera",
+    "title": "OpenValthera Vision Stack",
     "summary": "Open-source vision stack with stereo camera hardware, GPU processing, and AI agent for training video classifiers.",
     "keywords": [
       "react",
@@ -2252,7 +2252,7 @@
     "source": "GitHub"
   },
   {
-    "title": "momentics/NanoVNA-X",
+    "title": "NanoVNA-X Refined Firmware",
     "summary": "NanoVNA‑X is a refined firmware for NanoVNA‑H/H4, introducing an event‑driven architecture, improved sweep stability, UI polish, per‑unit USB identifiers, and integrated SD features for reliable field operation.​",
     "keywords": [
       "firmware",
@@ -2278,7 +2278,7 @@
     "source": "GitHub"
   },
   {
-    "title": "CMB27/Nano2UNO-Adapter-3V3",
+    "title": "Nano to UNO 3.3V Adapter Board",
     "summary": "A circuit board to adapt 3.3V Arduino Nano boards the the Arduino UNO form factor.",
     "keywords": [
       "arduino",
@@ -2297,7 +2297,7 @@
     "source": "GitHub"
   },
   {
-    "title": "xunker/simple_sl2.1a_usb_hub",
+    "title": "Simple SL2.1A USB Hub",
     "summary": "A \"SLuper SLimple\" USB 2.0 Hub on a 1-square-inch board, using the SL2.1A IC",
     "keywords": [
       "usb",
@@ -2312,7 +2312,7 @@
     "source": "GitHub"
   },
   {
-    "title": "overscore-media/luxigrid",
+    "title": "Luxigrid WiFi LED Matrix",
     "summary": "Luxigrid is a WiFi-enabled LED matrix for your desk, compatible with an ecosystem of 25+ apps.",
     "keywords": [
       "cplusplus",
@@ -2333,7 +2333,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/tjko",
+    "title": "BrickPico LED Light Controller",
     "summary": "BrickPico - Open Source LED Light Controller",
     "keywords": [
       "open-source",
@@ -2359,7 +2359,7 @@
     "source": "GitHub"
   },
   {
-    "title": "SurvivorGrim/PipBoy-Pi5",
+    "title": "PipBoy-Pi5 Build Guide",
     "summary": "PipBoy-Pi5 Project. A how to guide on building your own functional PipBoy from Fallout!",
     "keywords": [
       "python",
@@ -2388,7 +2388,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Alfystar/Scorbot-CA",
+    "title": "Scorbot Control Project",
     "summary": "Progetto di Controlli Automatici, 3° Ing. Informatica, Prof: Daniele Carnevale",
     "keywords": [
       "scorbot",
@@ -2401,7 +2401,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/seanpm2001",
+    "title": "WacOS Hardware Blueprints",
     "summary": "Hardware blueprints for unique WacOS installations, but without vendor lock-in (meaning you can switch to any compatible OS, it does't have to be WacOS)",
     "keywords": [
       "raspberry-pi",
@@ -2426,7 +2426,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tjko/tiny-picoprobe",
+    "title": "Tiny PicoProbe PCB",
     "summary": "Tiny PicoProbe PCB",
     "keywords": [
       "raspberry-pi",
@@ -2445,7 +2445,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Christians-Shop/CTS_tasmota_SML",
+    "title": "CTS Tasmota Smart Meter Firmware",
     "summary": "Custom Tasmota firmware for the WiFi IR Smartmeterinterface (WiFi IR SMI) – optimized for SML infrared smart meters. Developed by Christians Technikshop.",
     "keywords": [
       "home-automation",
@@ -2466,7 +2466,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ZAWAJAN/Acapulco-Sensors",
+    "title": "Acapulco Sensors Documentation",
     "summary": "A repository with open source hardware documentation for Acapulco Research Project at TU Delft Green Village.",
     "keywords": [
       "open-source",
@@ -2485,7 +2485,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ICST-AHMI/TouchBox",
+    "title": "TouchBox Interaction Tool",
     "summary": "Repository for the TouchBox",
     "keywords": [
       "tool",
@@ -2505,7 +2505,7 @@
     "source": "GitHub"
   },
   {
-    "title": "hoijui/for-science-keyboard",
+    "title": "For Science Split Keyboard",
     "summary": "A split ergo 4x5 keyboard with 3 thumb keys where each half is smaller than the 100x100mm cheap PCB production size.",
     "keywords": [
       "open-source-hardware",
@@ -2518,7 +2518,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Light-Proximity-Switch",
+    "title": "Light Proximity Assistive Switch",
     "summary": "An open-source assistive switch that is activated by movement or extremely light contact.",
     "keywords": [
       "open-source",
@@ -2537,7 +2537,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Jethackers/Jethackers",
+    "title": "Open Source Jetpack Hoverboard",
     "summary": "open source jetpack/hoverboard",
     "keywords": [
       "hardware",
@@ -2551,7 +2551,7 @@
     "source": "GitHub"
   },
   {
-    "title": "epccs/Irrigate7",
+    "title": "Irrigate7 Irrigation Control System",
     "summary": "Open-source Hardware & Software for Irrigation, ATmega1284p and seven latching solenoid drivers and flow sensor input",
     "keywords": [
       "avr",
@@ -2568,7 +2568,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ellull/fan-controller",
+    "title": "ESP32 Fan Controller",
     "summary": "Fan Controller with home automation capabilities",
     "keywords": [
       "esp32",
@@ -2584,7 +2584,7 @@
     "source": "GitHub"
   },
   {
-    "title": "limingjie/Logic-Gate-Learning-Kit",
+    "title": "Logic Gate Learning Kit",
     "summary": "Logic Gate Learning Kit",
     "keywords": [
       "logic-gates",
@@ -2596,7 +2596,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tjko/to99-to-dip8-adapter-pcb",
+    "title": "TO-99 to DIP-8 Adapter PCB",
     "summary": "TO-99 to DIP-8 adapter PCB",
     "keywords": [
       "adapter",
@@ -2614,7 +2614,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/fm4dd",
+    "title": "TCA6424A I2C PMOD Expander",
     "summary": "This Type-6 I2C PMOD provides a 24-bit digital IO expander, using the Texas Instruments TCA6424A circuit.",
     "keywords": [
       "fpga",
@@ -2631,7 +2631,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/Simple-Switch-Tester",
+    "title": "Simple Switch Tester",
     "summary": "A simple battery operated tester with a light for testing assistive switches via a 3.5 mm jack.",
     "keywords": [
       "accessibility",
@@ -2646,7 +2646,7 @@
     "source": "GitHub"
   },
   {
-    "title": "MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN",
+    "title": "INSA MOSH Strain Gauge Project",
     "summary": "INSA 4GP MOSH Project - NGO/TRAN",
     "keywords": [
       "arduino",
@@ -2663,7 +2663,7 @@
     "source": "GitHub"
   },
   {
-    "title": "birgerjohansson/Epi",
+    "title": "Epi Open Humanoid Platform",
     "summary": "Epi: An Open Humanoid Platform",
     "keywords": [
       "robots",
@@ -2676,7 +2676,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Fifty-Nine/wavegen",
+    "title": "USB-Controlled Function Generator",
     "summary": "Open source implementation of a USB-controlled function generator",
     "keywords": [
       "function-generator",
@@ -2689,7 +2689,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DocuBricks/meta",
+    "title": "DocuBricks Meta Information",
     "summary": "Meta-information on the project in general, such as readme, contributing guidelines, and more",
     "keywords": [
       "open-source",
@@ -2706,7 +2706,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/meowmeowahr",
+    "title": "Kevinbot Core Robot Controller",
     "summary": "Kevinbot Core - Parallax Propeller 2 Robot Controller",
     "keywords": [
       "robot",
@@ -2729,7 +2729,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DocuBricks/docubricksSite",
+    "title": "DocuBricks Website",
     "summary": "Code for the DocuBricks website",
     "keywords": [
       "open-source",
@@ -2743,7 +2743,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/silvioviscuso",
+    "title": "NOVA34 Ultra-Small Linux Board",
     "summary": "NOVA34 is an open-source, ultra-small 34mm Linux & Android board with custom PCB design, optimized for embedded systems and peripherals integration.",
     "keywords": [
       "iot",
@@ -2769,7 +2769,7 @@
     "source": "GitHub"
   },
   {
-    "title": "aieask/vsd_pll",
+    "title": "8x PLL Clock Multiplier Design",
     "summary": "8x PLL Clock Multiplier PLL Design with an input frequency range of 5Mhz to 12.5Mhz and output frequency range of 40Mhz to 100Mhz, giving an 8x multiplied clock at ~50% duty cycle on tt corner at room temperature.",
     "keywords": [
       "open-source",
@@ -2794,7 +2794,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/seanpm2001",
+    "title": "Supercomputer Laptop Standards",
     "summary": "Standards for supercomputer power-user laptops.",
     "keywords": [
       "documentation",
@@ -2816,7 +2816,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/transistorfet",
+    "title": "Computie FPGA Expansion Board",
     "summary": "An FPGA board that can interface to the Computie expansion bus using an iCE40HX1K",
     "keywords": [
       "fpga",
@@ -2837,7 +2837,7 @@
     "source": "GitHub"
   },
   {
-    "title": "isystemsautomation/HOMEMASTER",
+    "title": "HomeMaster Smart Home Platform",
     "summary": "HomeMaster is an open-source platform for local-first smart home automation using ESP32-based devices like MiniPLC and MicroPLC. This repository includes firmware, schematics, and documentation for creating modular, cloud-free automation systems fully compatible with Home Assistant via ESPHome",
     "keywords": [
       "home-automation",
@@ -2859,7 +2859,7 @@
     "source": "GitHub"
   },
   {
-    "title": "jiegec/HT42B534USB2UART",
+    "title": "HT42B534 USB to UART Board",
     "summary": "A simple USB to UART board designed with KiCad.",
     "keywords": [
       "kicad",
@@ -2871,7 +2871,7 @@
     "source": "GitHub"
   },
   {
-    "title": "MAKERSUN99/MAUS",
+    "title": "MAUS Mouse Jiggler",
     "summary": "MAUS Arduino USB Mouse Jiggler – Mini Programmable ATtiny85 – Open Source",
     "keywords": [
       "arduino",
@@ -2892,7 +2892,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Aightm8/Traffic-wave-disruptor",
+    "title": "Traffic Wave Disruptor",
     "summary": "An invention that can minimize traffic jams by taking down traffic waves",
     "keywords": [
       "open-source",
@@ -2910,7 +2910,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Open-Hardware-Leaders/ohlwebsite",
+    "title": "Open Hardware Leaders Website",
     "summary": "Repository hosting website source files for the Open Hardware Leaders program",
     "keywords": [
       "open-source",
@@ -2922,7 +2922,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DocuBricks/docubricksViewer",
+    "title": "DocuBricks Viewer",
     "summary": "",
     "keywords": [
       "open-source",
@@ -2937,7 +2937,7 @@
     "source": "GitHub"
   },
   {
-    "title": "rianadon/Cosmos-Keyboard-PCBs",
+    "title": "Cosmos Keyboard PCB Designs",
     "summary": "Open-Source keyboard PCB designs for the Cosmos Keyboard Generator",
     "keywords": [
       "keyboards",
@@ -2948,7 +2948,7 @@
     "source": "GitHub"
   },
   {
-    "title": "SushiBits/SushiBitsOne",
+    "title": "SushiBitsOne Cortex-M Kit",
     "summary": "Arduino-compatible ARM Cortex-M kits, with ULP option",
     "keywords": [
       "cortex-m",
@@ -2970,7 +2970,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ebbcarbon/openalk",
+    "title": "OpenAlk Seawater Alkalinity Meter",
     "summary": "Open-source instrumentation for measurement of seawater total alkalinity",
     "keywords": [
       "python",
@@ -2985,7 +2985,7 @@
     "source": "GitHub"
   },
   {
-    "title": "chuangzhu/insect-robot",
+    "title": "Insect Robot Phone Control",
     "summary": "🪲 Control an insect using your cell phone.",
     "keywords": [
       "arduino",
@@ -3000,7 +3000,7 @@
     "source": "GitHub"
   },
   {
-    "title": "iop-alliance/OpenKnowHow",
+    "title": "OpenKnowHow Metadata Specification",
     "summary": "A specification for metadata of technology designs (aka Open Source Hardware), to enable indexing and searching such projects",
     "keywords": [
       "search",
@@ -3018,7 +3018,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cornell-zhang/GraphLily",
+    "title": "GraphLily Graph Linear Algebra",
     "summary": "A graph linear algebra overlay",
     "keywords": [
       "graph-processing",
@@ -3031,7 +3031,7 @@
     "source": "GitHub"
   },
   {
-    "title": "OPEN-NEXT/WP2.3-Guideline-and-template-for-documentation-of-OSH-design-reuse",
+    "title": "OSH Documentation Template",
     "summary": "This guideline delivers a template standing as minimum viable documentation for open source hardware.",
     "keywords": [
       "open-source",
@@ -3046,7 +3046,7 @@
     "source": "GitHub"
   },
   {
-    "title": "limingjie/MJs-PCB-Ruler",
+    "title": "MJ's PCB Ruler",
     "summary": "An open-source low-cost PCB ruler",
     "keywords": [
       "pcb",
@@ -3061,7 +3061,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Protocentral/protocentral_healthypi5_zephyr",
+    "title": "HealthyPi 5 Zephyr Codebase",
     "summary": "Main repository for the HealthyPi 5 Zephyr codebase",
     "keywords": [
       "open-source-hardware",
@@ -3073,7 +3073,7 @@
     "source": "GitHub"
   },
   {
-    "title": "SasaKaranovic/ESP-IoT-Dimmer",
+    "title": "ESP8266 IoT Three Channel Dimmer",
     "summary": "ESP8266 IoT three channel dimmer",
     "keywords": [
       "iot",
@@ -3089,7 +3089,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tetrabiodistributed/papra",
+    "title": "PAPRa Powered Air-Purifying Respirator",
     "summary": "PAPRa - a Powered Air-Purifying Respirator (PAPR)",
     "keywords": [
       "open-hardware",
@@ -3106,7 +3106,7 @@
     "source": "GitHub"
   },
   {
-    "title": "prometheus-science/Flypi",
+    "title": "Flypi Open Source Microscope",
     "summary": "This is the repository for the flypi project",
     "keywords": [
       "open-source",
@@ -3121,7 +3121,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ohwmakers/OHM-curriculum",
+    "title": "Open Hardware Makers Curriculum",
     "summary": "Open Hardware Makers Curriculum",
     "keywords": [
       "open-science",
@@ -3133,7 +3133,7 @@
     "source": "GitHub"
   },
   {
-    "title": "DragonComputer/DragonArmor",
+    "title": "Dragon Armor 3D-Printable Helmet",
     "summary": "Dragon Armor 3D-printable CAD files (Autodesk Fusion 360)",
     "keywords": [
       "engineering",
@@ -3147,7 +3147,7 @@
     "source": "GitHub"
   },
   {
-    "title": "pulp-platform/hero-sdk",
+    "title": "HERO SDK (Deprecated)",
     "summary": "⛔ DEPRECATED ⛔ HERO Software Development Kit",
     "keywords": [
       "openmp",
@@ -3168,7 +3168,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Lampro-Mellon/Quasar",
+    "title": "Quasar 2.0 RISC-V Processor",
     "summary": "Quasar 2.0: Chisel equivalent of SweRV-EL2",
     "keywords": [
       "scala",
@@ -3191,7 +3191,7 @@
     "source": "GitHub"
   },
   {
-    "title": "apertus-open-source-cinema/axiom-micro-mainboard",
+    "title": "Axiom Micro Camera Mainboard",
     "summary": "axiom micro mainboard containing the cmos sensor, headers for plugin modules and more",
     "keywords": [
       "camera",
@@ -3208,7 +3208,7 @@
     "source": "GitHub"
   },
   {
-    "title": "FOSH-following-demand/equipment_repository_template",
+    "title": "FOSH Equipment Repository Template",
     "summary": "This is a template repository. should be used as a guideline by people/groups developing equipment in this project",
     "keywords": [
       "open-source",
@@ -3220,7 +3220,7 @@
     "source": "GitHub"
   },
   {
-    "title": "brailletouch/Brailletouch",
+    "title": "Brailletouch Low-Cost Braille Display",
     "summary": "This project seeks to develop a low-cost, open-source braille display. It is estimated that its cost is reduced to more than 90% compared to the cost of the cheapest screens that exist in the market today. // Este proyecto busca desarrollar una pantalla braille de código abierto y de bajo costo. Se estima que su coste se reduce a más de un 90%.",
     "keywords": [
       "open-source",
@@ -3233,7 +3233,7 @@
     "source": "GitHub"
   },
   {
-    "title": "andium/Anduino",
+    "title": "Anduino Arduino Shield Library",
     "summary": "An Arduino library for the Andium(Anduino) shield. Transform your Arduino into an AndiumNode.",
     "keywords": [
       "iot",
@@ -3249,7 +3249,7 @@
     "source": "GitHub"
   },
   {
-    "title": "mirseo/JSilicon",
+    "title": "JSilicon 8-Bit CPU Core",
     "summary": "JSilicon: A dual-mode 8-bit CPU core designed entirely from scratch by an AI major during mandatory military service in South Korea. This open-source Verilog project proves that real silicon design — from ALU to CPU architecture — is possible even under the most extreme constraints.",
     "keywords": [
       "asic",
@@ -3277,7 +3277,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makersmakingchange/LipSync-Classic",
+    "title": "LipSync Classic Mouth Mouse",
     "summary": "An open-source mouth operated sip and puff joystick that enables people with limited hand function emulate a mouse on their computer and/or smartphone.",
     "keywords": [
       "open-source",
@@ -3301,7 +3301,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cucapra/dahlia",
+    "title": "Dahlia Hardware Description Language",
     "summary": "Time-sensitive affine types for predictable hardware generation",
     "keywords": [
       "open-source-hardware",
@@ -3314,7 +3314,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Open-ATS-Github/Newone",
+    "title": "Open ATS Transport Vehicle",
     "summary": "3D printed, low cost transport vehicle controlled over mobile internet and programed in Python",
     "keywords": [
       "python",
@@ -3340,7 +3340,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/transistorfet",
+    "title": "68k Computer Projects Collection",
     "summary": "A collection of 68k computer projects, including a unix-like operating system written in C that runs on them",
     "keywords": [
       "c",
@@ -3365,7 +3365,7 @@
     "source": "GitHub"
   },
   {
-    "title": "ojg/thatmicpre",
+    "title": "THAT Mic Pre-amplifier",
     "summary": "Microphone Pre-amplifier",
     "keywords": [
       "audio",
@@ -3380,7 +3380,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cornell-zhang/HiSparse",
+    "title": "HiSparse Linear Algebra on FPGA",
     "summary": "High-Performance Sparse Linear Algebra on HBM-Equipped FPGAs Using HLS",
     "keywords": [
       "open-source-hardware",
@@ -3393,7 +3393,7 @@
     "source": "GitHub"
   },
   {
-    "title": "commaai/hardware",
+    "title": "Comma.ai Hardware Repository",
     "summary": "the home for all comma.ai hardware",
     "keywords": [
       "hardware",
@@ -3404,7 +3404,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/tjko",
+    "title": "Fanpico PWM Fan Controller",
     "summary": "Fanpico: Open Source Programmable PWM (PC) Fan Controller",
     "keywords": [
       "open-source",
@@ -3433,7 +3433,7 @@
     "source": "GitHub"
   },
   {
-    "title": "cornell-zhang/hcl-dialect",
+    "title": "HCL Dialect for Accelerator Design",
     "summary": "HeteroCL-MLIR dialect for accelerator design",
     "keywords": [
       "fpga",
@@ -3448,7 +3448,7 @@
     "source": "GitHub"
   },
   {
-    "title": "Spooky-Manufacturing/8Q",
+    "title": "8Q Optical Quantum Computer",
     "summary": "General Purpose 8 Qubit Optical Quantum Computer",
     "keywords": [
       "hardware",
@@ -3464,7 +3464,7 @@
     "source": "GitHub"
   },
   {
-    "title": "tancheng/CGRA-Flow",
+    "title": "CGRA-Flow Compilation Framework",
     "summary": "CGRA-Flow is an integrated framework for CGRA compilation, exploration, synthesis, and development.",
     "keywords": [
       "open-source-hardware",
@@ -3480,7 +3480,7 @@
     "source": "GitHub"
   },
   {
-    "title": "biomurph/Mouse",
+    "title": "Open Source Mouse Hardware",
     "summary": "Repository for Open Source Mouse Firmware and Hardware",
     "keywords": [
       "arduino",
@@ -3501,7 +3501,7 @@
     "source": "GitHub"
   },
   {
-    "title": "pnnl/OpenCGRA",
+    "title": "OpenCGRA Framework",
     "summary": "OpenCGRA is an open-source framework for modeling, testing, and evaluating CGRAs.",
     "keywords": [
       "open-source-hardware",
@@ -3512,7 +3512,7 @@
     "source": "GitHub"
   },
   {
-    "title": "delftopenhardware/awesome-open-hardware",
+    "title": "Awesome Open Hardware List",
     "summary": "🛠Helpful items for making open source hardware projects.",
     "keywords": [
       "awesome",
@@ -3526,7 +3526,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makerdiary/nrf52840-mdk",
+    "title": "nRF52840 MDK IoT Development Kit",
     "summary": "An Open-Source, Micro Development Kit for IoT Applications using the nRF52840 SoC",
     "keywords": [
       "iot",
@@ -3541,7 +3541,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/Irev-Dev",
+    "title": "OpenSCAD Radii and Fillets Library",
     "summary": "A set of OpenSCAD utilities for adding radii and fillets, that embodies a robust approach to developing OpenSCAD parts.",
     "keywords": [
       "library",
@@ -3565,7 +3565,7 @@
     "source": "GitHub"
   },
   {
-    "title": "evanman83/OURS-project",
+    "title": "OURS Open Source Smartphone",
     "summary": "Step-by-step instructions to build a smartphone that is open-source, upgradeable, repairable, and Big Tech free.",
     "keywords": [
       "linux",
@@ -3582,7 +3582,7 @@
     "source": "GitHub"
   },
   {
-    "title": "OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source",
+    "title": "Open Research Software Module",
     "summary": "Module 5: Open Research Software and Open Source",
     "keywords": [
       "open-source",
@@ -3600,7 +3600,7 @@
     "source": "GitHub"
   },
   {
-    "title": "makerdiary/nrf52832-mdk",
+    "title": "nRF52832 MDK IoT Development Kit",
     "summary": "An Open Source, Micro Development Kit for IoT Embedded Applications using the nRF52832 SoC",
     "keywords": [
       "iot",
@@ -3613,7 +3613,7 @@
     "source": "GitHub"
   },
   {
-    "title": "JulianKemmerer/PipelineC",
+    "title": "PipelineC Hardware Description Language",
     "summary": "A C-like hardware description language (HDL) adding high level synthesis(HLS)-like automatic pipelining as a language construct/compiler feature.",
     "keywords": [
       "python",
@@ -3636,7 +3636,7 @@
     "source": "GitHub"
   },
   {
-    "title": "pymtl/pymtl3",
+    "title": "PyMTL3 Hardware Framework",
     "summary": "Pymtl 3 (Mamba), an open-source Python-based hardware generation, simulation, and verification framework",
     "keywords": [
       "python",
@@ -3656,7 +3656,7 @@
     "source": "GitHub"
   },
   {
-    "title": "pachterlab/poseidon",
+    "title": "Poseidon Laboratory System",
     "summary": "poseidon system - open source syringe pumps and microscope for laboratories",
     "keywords": [
       "biology",
@@ -3669,7 +3669,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/calyxir",
+    "title": "Calyx Intermediate Language",
     "summary": "Intermediate Language (IL) for Hardware Accelerator Generators",
     "keywords": [
       "compiler",
@@ -3683,7 +3683,7 @@
     "source": "GitHub"
   },
   {
-    "title": "/theacodes",
+    "title": "KiCAD Web Viewer",
     "summary": "The KiCAD web viewer",
     "keywords": [
       "webgl",
@@ -3697,7 +3697,7 @@
     "source": "GitHub"
   },
   {
-    "title": "chipsalliance/Cores-VeeR-EL2",
+    "title": "VeeR EL2 RISC-V Core",
     "summary": "VeeR EL2 Core",
     "keywords": [
       "fpga",
@@ -3720,7 +3720,7 @@
     "source": "GitHub"
   },
   {
-    "title": "chipsalliance/Cores-VeeR-EH1",
+    "title": "VeeR EH1 RISC-V Core",
     "summary": "VeeR EH1 core",
     "keywords": [
       "fpga",
