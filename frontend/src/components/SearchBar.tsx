@@ -1,26 +1,39 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+const SearchBar = ({ onSearch }: SearchBarProps) => {
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
 
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (query.trim()) {
+      onSearch(query.trim());
+    }
+  };
+
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      {/* Rainbow border wrapper */}
+    <div className="w-full max-w-3xl mx-auto">
+      {/* Retro thick border wrapper */}
       <div
-        className={`p-[2px] rounded-2xl transition-all duration-300 ${
-          isFocused
-            ? "rainbow-border shadow-elevated"
-            : "bg-border shadow-soft"
-        }`}
+        className={`p-2 bg-foreground transition-all duration-300 ${isFocused
+          ? "shadow-elevated -translate-y-1"
+          : "shadow-soft"
+          }`}
       >
-        <div className="relative flex items-center bg-card rounded-[14px]">
+        <form
+          className="relative flex items-center bg-background border-4 border-foreground w-full"
+          onSubmit={handleSubmit}
+        >
           <Search
-            className={`absolute left-5 transition-colors duration-200 ${
-              isFocused ? "text-primary" : "text-muted-foreground"
-            }`}
-            size={22}
+            className={`absolute left-5 transition-colors duration-200 ${isFocused ? "text-primary" : "text-muted-foreground"
+              }`}
+            size={24}
+            strokeWidth={3}
           />
           <input
             type="text"
@@ -28,28 +41,37 @@ const SearchBar = () => {
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            placeholder="Search hardware projects, components, tutorials..."
-            className="w-full py-4 pl-14 pr-5 text-lg bg-transparent rounded-[14px] outline-none placeholder:text-muted-foreground text-foreground"
+            placeholder="Search hardware components..."
+            className="w-full py-5 pl-16 pr-6 text-xl bg-transparent outline-none placeholder:text-muted-foreground font-bold text-foreground
+            focus:ring-0"
           />
           {query && (
             <button
-              onClick={() => setQuery("")}
-              className="absolute right-5 text-muted-foreground hover:text-foreground transition-colors"
+              type="button"
+              onClick={() => {
+                setQuery("");
+                onSearch(""); // Reset search
+              }}
+              className="absolute right-5 text-foreground hover:text-primary transition-colors bg-secondary p-1 border-2 border-foreground"
             >
               ✕
             </button>
           )}
-        </div>
+        </form>
       </div>
-      
+
       {/* Search hints */}
-      <div className="flex flex-wrap justify-center gap-2 mt-4">
+      <div className="flex flex-wrap justify-center gap-3 mt-6">
         {["Arduino", "Raspberry Pi", "3D Printing", "Robotics", "IoT"].map(
           (hint) => (
             <button
               key={hint}
-              onClick={() => setQuery(hint)}
-              className="px-4 py-1.5 text-sm font-medium bg-accent text-accent-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+              type="button"
+              onClick={() => {
+                setQuery(hint);
+                onSearch(hint);
+              }}
+              className="px-4 py-2 text-xs font-pixel uppercase bg-card text-foreground border-2 border-foreground shadow-[2px_2px_0_0_rgba(40,32,16,1)] hover:bg-primary hover:-translate-y-0.5 hover:shadow-[4px_4px_0_0_rgba(40,32,16,1)] transition-all duration-200"
             >
               {hint}
             </button>
