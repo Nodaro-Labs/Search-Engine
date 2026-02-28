@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal, { ProjectData } from "@/components/ProjectModal";
 import FloatingShapes from "@/components/FloatingShapes";
+import { initialFeaturedProjects } from "@/data/projects";
 
 const AllProjects = () => {
     const [projects, setProjects] = useState<any[]>([]);
@@ -18,25 +19,16 @@ const AllProjects = () => {
 
     useEffect(() => {
         const fetchProjects = async () => {
+            setLoading(true);
             try {
-                setLoading(true);
-                // Searching with empty query returns all projects from backend
-                // Note: Realistically, you'd want a dedicated /api/projects endpoint with pagination
-                // but for now we'll fetch all and paginate client-side to be safe and simple
-                const response = await fetch(`http://localhost:8000/api/search?q=`);
-                if (!response.ok) {
-                    throw new Error("Failed to fetch projects");
-                }
-                const data = await response.json();
+                // Simulate network delay for effect
+                await new Promise(resolve => setTimeout(resolve, 500));
 
-                if (data.error) {
-                    throw new Error(data.error);
-                }
-
-                setProjects(data);
+                // Use local mock data instead of backend fetch
+                setProjects(initialFeaturedProjects);
             } catch (err) {
                 console.error("Fetch error:", err);
-                setError("Could not load projects. Is the backend running?");
+                setError("Could not load projects.");
             } finally {
                 setLoading(false);
             }

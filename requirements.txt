@@ -8,3 +8,10 @@ torch
 
 scikit-learn
 numpy
+
+fastapi
+uvicorn
+python-dotenv
+pyjwt
+passlib
+bcrypt==3.2.2

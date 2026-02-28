@@ -21,7 +21,7 @@ client = QdrantClient(
 # Embedding model (must match ingestion!)
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-def search_projects(query: str, limit: int = 5):
+def search_projects(query: str, limit: int = 300):
     query_vector = model.encode(query).tolist()
     
     results = client.query_points(

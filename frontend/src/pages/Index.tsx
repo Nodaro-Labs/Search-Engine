@@ -10,7 +10,7 @@ import {
   FolderOpen,
   Loader2
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
@@ -20,70 +20,21 @@ import ProjectModal, { ProjectData } from "@/components/ProjectModal";
 import FloatingShapes from "@/components/FloatingShapes";
 import { getAuthToken, getAuthHeaders, getUsername } from "@/lib/auth";
 import { motion, AnimatePresence } from "framer-motion";
+import { initialFeaturedProjects } from "@/data/projects";
 
 const categories = [
-  { icon: Cpu, label: "Electronics", count: 21 },
-  { icon: Printer, label: "3D Printing", count: 14 },
-  { icon: Bot, label: "Robotics", count: 11 },
-  { icon: Wifi, label: "IoT", count: 16 },
-  { icon: Lightbulb, label: "Arduino", count: 28 },
-  { icon: Wrench, label: "Tools", count: 6 },
+  { icon: Cpu, label: "Electronics", count: initialFeaturedProjects.filter(p => p.category === "Electronics").length },
+  { icon: Printer, label: "3D Printing", count: initialFeaturedProjects.filter(p => p.category === "3D Printing").length },
+  { icon: Bot, label: "Robotics", count: initialFeaturedProjects.filter(p => p.category === "Robotics").length },
+  { icon: Wifi, label: "IoT", count: initialFeaturedProjects.filter(p => p.category === "IoT").length },
+  { icon: Lightbulb, label: "Arduino", count: initialFeaturedProjects.filter(p => p.category === "Arduino").length },
+  { icon: Wrench, label: "Tools", count: initialFeaturedProjects.filter(p => p.category === "Tools").length },
 ];
 
-const initialFeaturedProjects = [
-  {
-    title: "Qeteshpony/BreadBoard-Power",
-    description: "Power supply board for solderless breadboards",
-    category: "Electronics",
-    likes: 0,
-    color: "hsl(200 85% 55%)",
-    link: "https://github.com/Qeteshpony/BreadBoard-Power",
-  },
-  {
-    title: "makerspet/kiddo",
-    description: "Kiddo companion robot, open-source hardware specifically designed for Kaia.ai framework.",
-    category: "Robotics",
-    likes: 0,
-    color: "hsl(25 95% 55%)",
-    link: "https://github.com/makerspet/kiddo",
-  },
-  {
-    title: "joshumax/open-aim-assist",
-    description: "Open source accessibility & IMU assistance hardware for first-person shooters like Valorant.",
-    category: "Tools",
-    likes: 0,
-    color: "hsl(280 70% 60%)",
-    link: "https://github.com/joshumax/open-aim-assist",
-  },
-  {
-    title: "mzollin/talisman",
-    description: "A tribute to the great microchip shortage of 2021 with retro LED matrix logic gates.",
-    category: "Electronics",
-    likes: 0,
-    color: "hsl(140 70% 45%)",
-    link: "https://github.com/mzollin/talisman",
-  },
-  {
-    title: "emilio2601/alcool-v1",
-    description: "Open source breathalyzer - powered by Arduino! Measure reliably with custom components.",
-    category: "Arduino",
-    likes: 0,
-    color: "hsl(45 95% 55%)",
-    link: "https://github.com/emilio2601/alcool-v1",
-  },
-  {
-    title: "liu2g/mgms",
-    description: "Modular Garden Monitoring System - Open source IoT hardware for tracking agricultural conditions.",
-    category: "IoT",
-    likes: 0,
-    color: "hsl(0 85% 60%)",
-    link: "https://github.com/liu2g/mgms",
-  },
-];
 
 const stats = [
   { icon: Users, value: "Become a", label: "Maker" },
-  { icon: FolderOpen, value: "300+", label: "Projects" },
+  { icon: FolderOpen, value: `${initialFeaturedProjects.length}+`, label: "Projects" },
   { icon: Zap, value: "Made by", label: "Engineering Students" },
 ];
 
@@ -95,8 +46,9 @@ const Index = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
   const [showFlash, setShowFlash] = useState(false);
+  const resultsRef = useRef<HTMLElement>(null);
 
-  const handleSearch = async (query: string) => {
+  const handleSearch = async (query: string, skipAnimation = false) => {
     if (!query) {
       setFeaturedProjects(initialFeaturedProjects);
       setSearchError("");
@@ -104,43 +56,65 @@ const Index = () => {
       return;
     }
 
-    setShowFlash(true);
-
-    // Give it a brief moment for the flash to cover screen
-    setTimeout(async () => {
+    const performSearch = async () => {
       setIsSearching(true);
       setSearchError("");
       try {
-        const response = await fetch(`http://localhost:8000/api/search?q=${encodeURIComponent(query)}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch search results");
-        }
-        const data = await response.json();
+        // Local filtering instead of backend fetch
+        const queryLower = query.toLowerCase();
 
-        if (data.error) {
-          throw new Error(data.error);
-        }
+        // Let's filter by title, description, or exact category match
+        const filtered = initialFeaturedProjects.filter(p =>
+          p.title.toLowerCase().includes(queryLower) ||
+          p.description.toLowerCase().includes(queryLower) ||
+          p.category.toLowerCase() === queryLower
+        );
 
-        setFeaturedProjects(data);
+        setFeaturedProjects(filtered);
       } catch (err) {
         console.error("Search error:", err);
-        setSearchError("Could not connect to the search server. Is the Python backend running?");
+        setSearchError("Could not search local projects.");
         setFeaturedProjects(initialFeaturedProjects);
       } finally {
         setIsSearching(false);
-        // Turn off flash after search resolves
-        setTimeout(() => setShowFlash(false), 300);
+        if (!skipAnimation) {
+          // Turn off terminal after search resolves (with slight delay for effect)
+          setTimeout(() => {
+            setShowFlash(false);
+            // Scroll to results after short delay to let DOM settle
+            setTimeout(() => {
+              if (resultsRef.current) {
+                resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100);
+          }, 200); // Decreased from 400ms
+        } else {
+          // Just scroll since there was no animation
+          setTimeout(() => {
+            if (resultsRef.current) {
+              resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 100);
+        }
       }
-    }, 500);
+    };
+
+    if (skipAnimation) {
+      performSearch();
+    } else {
+      setShowFlash(true);
+      // Give it more time for the fake terminal text to be readable
+      setTimeout(performSearch, 400); // Decreased from 800ms
+    }
   };
 
   const handleCategoryClick = (categoryLabel: string) => {
     if (activeCategory === categoryLabel) {
       // Toggle off
-      handleSearch("");
+      handleSearch("", true);
     } else {
       setActiveCategory(categoryLabel);
-      handleSearch(categoryLabel);
+      handleSearch(categoryLabel, true);
     }
   };
 
@@ -191,8 +165,39 @@ const Index = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="fixed inset-0 z-[200] bg-background pointer-events-none flex items-center justify-center"
+            className="fixed inset-0 z-[200] bg-background flex flex-col items-center justify-center font-pixel p-8"
           >
+            <div className="w-full max-w-2xl text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 }}
+                className="text-primary text-xl md:text-2xl mb-4"
+              >
+                &gt; INITIATING QUERY...
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 }}
+                className="text-primary text-xl md:text-2xl mb-4"
+              >
+                &gt; SCANNING HARDWARE REPOSITORIES...
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 }}
+                className="text-primary text-xl md:text-2xl flex items-center"
+              >
+                &gt; EXTRACTING SCHEMATICS
+                <motion.span
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ repeat: Infinity, duration: 0.8 }}
+                  className="ml-2 inline-block w-4 h-6 bg-primary"
+                />
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -210,7 +215,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-pixel uppercase text-center text-foreground max-w-5xl mx-auto leading-tight md:leading-tight lg:leading-tight">
             Discover Your Next
             <span className="block mt-4 flex justify-center gap-4">
-              <span className="orange-text tracking-widest drop-shadow-[4px_4px_0_rgba(40,32,16,1)] animate-bounce inline-block">Hardware</span>
+              <span className="orange-text tracking-widest drop-shadow-[4px_4px_0_rgba(40,32,16,1)] animate-glitch inline-block">Hardware</span>
               <span className="inline-block tracking-widest drop-shadow-[4px_4px_0_rgba(40,32,16,1)]">Project</span>
             </span>
           </h1>
@@ -275,11 +280,12 @@ const Index = () => {
 
       {/* Featured Projects Section */}
       <motion.section
+        ref={resultsRef}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5 }}
-        className="py-16 md:py-24 relative z-10"
+        className="py-16 md:py-24 relative z-10 scroll-mt-24"
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
@@ -336,31 +342,7 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5 }}
-        className="py-16 md:py-24 relative z-10"
-      >
-        <div className="container mx-auto px-4">
-          <div className="relative overflow-hidden border-4 border-foreground shadow-elevated bg-accent">
-            <div className="px-8 py-12 md:p-16 text-center">
-              <h2 className="text-2xl md:text-4xl font-pixel uppercase text-foreground leading-normal">
-                Have a project?
-              </h2>
-              <p className="mt-6 text-foreground/80 font-medium text-lg max-w-2xl mx-auto">
-                Join our community of makers and share your hardware projects
-                with thousands of enthusiasts worldwide.
-              </p>
-              <button className="mt-10 px-8 py-4 bg-primary text-foreground font-pixel text-sm uppercase border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(40,32,16,1)] hover:shadow-[8px_8px_0px_0px_rgba(40,32,16,1)] transition-all duration-200 hover:-translate-y-1">
-                Submit Project
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+
 
       {/* Footer */}
       <footer className="py-10 border-t-8 border-foreground bg-card relative z-10">

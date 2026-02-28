@@ -164,4 +164,40 @@
   .animate-pulse-slow {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  .animate-glitch {
+    animation: glitch 3s infinite;
+    animation-delay: -2.7s;
+    /* Skips the initial wait time on page load */
+  }
+
+  @keyframes glitch {
+
+    0%,
+    90%,
+    100% {
+      transform: translate(0, 0);
+      text-shadow: none;
+    }
+
+    92% {
+      transform: translate(-4px, 2px);
+      text-shadow: -2px 0 hsl(15, 95%, 55%), 2px 0 hsl(35, 95%, 55%);
+    }
+
+    94% {
+      transform: translate(4px, -2px);
+      text-shadow: 2px 0 hsl(45, 95%, 55%), -2px 0 hsl(25, 95%, 55%);
+    }
+
+    96% {
+      transform: translate(-2px, -2px);
+      text-shadow: none;
+    }
+
+    98% {
+      transform: translate(2px, 2px);
+      text-shadow: 3px 0 hsl(15, 95%, 55%), -2px 0 hsl(35, 95%, 55%);
+    }
+  }
 }
