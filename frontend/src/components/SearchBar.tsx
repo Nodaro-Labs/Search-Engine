@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -8,6 +9,19 @@ interface SearchBarProps {
 const SearchBar = ({ onSearch }: SearchBarProps) => {
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
+
+  const handleHintClick = (hint: string) => {
+    setQuery(hint);
+    navigate(`/search?q=${encodeURIComponent(hint)}`);
+  };
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
