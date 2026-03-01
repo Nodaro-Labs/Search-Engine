@@ -10,22 +10,7 @@ const FloatingShapes = () => {
         }}
       />
 
-      {/* Rainbow line accent */}
-      <div
-        className="absolute top-1/4 left-0 w-full h-[2px] opacity-20"
-        style={{
-          background: "var(--gradient-rainbow)",
-        }}
-      />
-
       {/* Small floating shapes */}
-      <div
-        className="absolute top-1/3 left-[10%] w-4 h-4 rounded-full animate-float"
-        style={{
-          background: "hsl(0 85% 60%)",
-          animationDelay: "0s",
-        }}
-      />
       <div
         className="absolute top-1/2 right-[15%] w-3 h-3 rounded-full animate-float"
         style={{

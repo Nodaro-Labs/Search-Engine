@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Outfit', 'system-ui', 'sans-serif'],
+        pixel: ['"Press Start 2P"', 'monospace'],
+        'pixel-title': ['"Press Start 2P"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -70,6 +72,13 @@ export default {
         soft: "var(--shadow-soft)",
         elevated: "var(--shadow-elevated)",
       },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        shimmer: "shimmer 3s ease-in-out infinite",
+        "slide-in-right": "slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-out-right": "slide-out-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -83,11 +92,14 @@ export default {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        shimmer: "shimmer 3s ease-in-out infinite",
+        "slide-in-right": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "slide-out-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        }
       },
     },
   },
