@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal, { ProjectData } from "@/components/ProjectModal";
 import FloatingShapes from "@/components/FloatingShapes";
-import { initialFeaturedProjects } from "@/data/projects";
+import { getCachedProjects } from "@/lib/projectsLoader";
 
 const AllProjects = () => {
     const [projects, setProjects] = useState<any[]>([]);
@@ -21,11 +21,9 @@ const AllProjects = () => {
         const fetchProjects = async () => {
             setLoading(true);
             try {
-                // Simulate network delay for effect
-                await new Promise(resolve => setTimeout(resolve, 500));
-
-                // Use local mock data instead of backend fetch
-                setProjects(initialFeaturedProjects);
+                // Load projects from JSON file
+                const loadedProjects = await getCachedProjects();
+                setProjects(loadedProjects);
             } catch (err) {
                 console.error("Fetch error:", err);
                 setError("Could not load projects.");

@@ -20,26 +20,13 @@ import ProjectModal, { ProjectData } from "@/components/ProjectModal";
 import FloatingShapes from "@/components/FloatingShapes";
 import { getAuthToken, getAuthHeaders, getUsername } from "@/lib/auth";
 import { motion, AnimatePresence } from "framer-motion";
-import { initialFeaturedProjects } from "@/data/projects";
-
-const categories = [
-  { icon: Cpu, label: "Electronics", count: initialFeaturedProjects.filter(p => p.category === "Electronics").length },
-  { icon: Printer, label: "3D Printing", count: initialFeaturedProjects.filter(p => p.category === "3D Printing").length },
-  { icon: Bot, label: "Robotics", count: initialFeaturedProjects.filter(p => p.category === "Robotics").length },
-  { icon: Wifi, label: "IoT", count: initialFeaturedProjects.filter(p => p.category === "IoT").length },
-  { icon: Lightbulb, label: "Arduino", count: initialFeaturedProjects.filter(p => p.category === "Arduino").length },
-  { icon: Wrench, label: "Tools", count: initialFeaturedProjects.filter(p => p.category === "Tools").length },
-];
-
-
-const stats = [
-  { icon: Users, value: "Become a", label: "Maker" },
-  { icon: FolderOpen, value: `${initialFeaturedProjects.length}+`, label: "Projects" },
-  { icon: Zap, value: "Made by", label: "Engineering Students" },
-];
+import { Project } from "@/data/projects";
+import { getCachedProjects } from "@/lib/projectsLoader";
 
 const Index = () => {
-  const [featuredProjects, setFeaturedProjects] = useState(initialFeaturedProjects);
+  const [allProjects, setAllProjects] = useState<Project[]>([]);
+  const [featuredProjects, setFeaturedProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -48,9 +35,46 @@ const Index = () => {
   const [showFlash, setShowFlash] = useState(false);
   const resultsRef = useRef<HTMLElement>(null);
 
+  // Load projects on mount
+  useEffect(() => {
+    const loadAllProjects = async () => {
+      setIsLoading(true);
+      try {
+        const projects = await getCachedProjects();
+        setAllProjects(projects);
+        // Only show first 21 projects on homepage
+        setFeaturedProjects(projects.slice(0, 21));
+      } catch (error) {
+        console.error("Failed to load projects:", error);
+        setSearchError("Failed to load projects. Please refresh the page.");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    loadAllProjects();
+  }, []);
+
+  // Calculate categories and stats dynamically
+  const categories = [
+    { icon: Cpu, label: "Electronics", count: allProjects.filter(p => p.category === "Electronics").length },
+    { icon: Printer, label: "3D Printing", count: allProjects.filter(p => p.category === "3D Printing").length },
+    { icon: Bot, label: "Robotics", count: allProjects.filter(p => p.category === "Robotics").length },
+    { icon: Wifi, label: "IoT", count: allProjects.filter(p => p.category === "IoT").length },
+    { icon: Lightbulb, label: "Arduino", count: allProjects.filter(p => p.category === "Arduino").length },
+    { icon: Wrench, label: "Tools", count: allProjects.filter(p => p.category === "Tools").length },
+  ];
+
+  const stats = [
+    { icon: Users, value: "Become a", label: "Maker" },
+    { icon: FolderOpen, value: `${allProjects.length}+`, label: "Projects" },
+    { icon: Zap, value: "Made by", label: "Engineering Students" },
+  ];
+
   const handleSearch = async (query: string, skipAnimation = false) => {
     if (!query) {
-      setFeaturedProjects(initialFeaturedProjects);
+      // Reset to first 21 projects when clearing search
+      setFeaturedProjects(allProjects.slice(0, 21));
       setSearchError("");
       setActiveCategory(null);
       return;
@@ -64,7 +88,7 @@ const Index = () => {
         const queryLower = query.toLowerCase();
 
         // Let's filter by title, description, or exact category match
-        const filtered = initialFeaturedProjects.filter(p =>
+        const filtered = allProjects.filter(p =>
           p.title.toLowerCase().includes(queryLower) ||
           p.description.toLowerCase().includes(queryLower) ||
           p.category.toLowerCase() === queryLower
@@ -74,7 +98,7 @@ const Index = () => {
       } catch (err) {
         console.error("Search error:", err);
         setSearchError("Could not search local projects.");
-        setFeaturedProjects(initialFeaturedProjects);
+        setFeaturedProjects(allProjects);
       } finally {
         setIsSearching(false);
         if (!skipAnimation) {
@@ -291,11 +315,13 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
             <div>
               <h2 className="text-2xl md:text-3xl font-pixel uppercase text-foreground leading-relaxed">
-                {isSearching ? "Searching..." : searchError ? "Featured Projects" : "Results & Featured Projects"}
+                {isSearching ? "Searching..." : activeCategory || searchError ? "Results" : "Featured Projects"}
               </h2>
               <p className="mt-3 text-muted-foreground font-medium text-lg">
                 {searchError ? (
                   <span className="text-destructive font-bold">{searchError}</span>
+                ) : activeCategory ? (
+                  `Showing ${featuredProjects.length} projects`
                 ) : (
                   "Handpicked projects from the community"
                 )}
@@ -309,7 +335,7 @@ const Index = () => {
             </Link>
           </div>
 
-          {isSearching ? (
+          {isLoading || isSearching ? (
             <div className="flex justify-center items-center py-20">
               <Loader2 className="w-16 h-16 text-primary animate-spin" />
             </div>
