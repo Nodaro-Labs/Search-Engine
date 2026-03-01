@@ -245,7 +245,7 @@ const Index = () => {
           </h1>
 
           <p className="mt-8 text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto font-medium">
-            Search through thousands of open-source hardware projects,
+            Search through hundreds of open-source hardware projects,
             components, and tutorials from makers around the world.
           </p>
 
