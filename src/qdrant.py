@@ -56,7 +56,7 @@ print("✅ Collection recreated")
 # --------------------
 # Load data
 # --------------------
-with open("src/projects.json", "r") as f:
+with open("projects.json", "r") as f:
     projects = json.load(f)
 
 # --------------------
