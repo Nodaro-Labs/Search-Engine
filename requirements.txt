@@ -15,3 +15,9 @@ python-dotenv
 pyjwt
 passlib
 bcrypt==3.2.2
+
+# Postgres drivers & ORM
+psycopg2-binary
+asyncpg
+sqlalchemy
+sqlmodel

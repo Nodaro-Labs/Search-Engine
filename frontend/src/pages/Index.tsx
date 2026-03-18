@@ -131,7 +131,8 @@ const Index = () => {
   const handleLike = async (title: string) => {
 
     try {
-      const response = await fetch("http://localhost:8000/api/projects/like", {
+      const baseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? "" : "http://localhost:8000");
+      const response = await fetch(`${baseUrl}/api/projects/like`, {
         method: "POST",
         headers: getAuthHeaders(),
         body: JSON.stringify({ project_title: title })
@@ -140,16 +141,17 @@ const Index = () => {
       const data = await response.json();
       if (!response.ok) throw new Error(data.detail || "Failed to like project");
 
-      // We don't have global state for which projects the user has liked yet,
-      // so we'll just optimistically increment/decrement the master like counter
-      // based on whether the backend says we liked or unliked it.
       setFeaturedProjects((prev) =>
         prev.map((project) =>
           project.title === title
-            ? { ...project, likes: data.liked ? project.likes + 1 : Math.max(0, project.likes - 1) }
+            ? { ...project, likes: data.total_likes }
             : project
         )
       );
+      
+      if (selectedProject?.title === title) {
+          setSelectedProject((prev) => prev ? { ...prev, likes: data.total_likes } : null);
+      }
     } catch (err) {
       console.error(err);
       alert("Something went wrong liking the project.");
@@ -374,11 +376,6 @@ const Index = () => {
         onLike={() => {
           if (selectedProject) {
             handleLike(selectedProject.title);
-            // Optimistically update the local modal state too
-            setSelectedProject({
-              ...selectedProject,
-              likes: selectedProject.likes + 1 // Real fix is complex without matching exactly if they already liked it, but this adds feel
-            });
           }
         }}
       />
