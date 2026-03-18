@@ -6,6 +6,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ProjectModal, { ProjectData } from "@/components/ProjectModal";
 import FloatingShapes from "@/components/FloatingShapes";
 import { getCachedProjects } from "@/lib/projectsLoader";
+import { getAuthHeaders } from "@/lib/auth";
 
 const AllProjects = () => {
     const [projects, setProjects] = useState<any[]>([]);
@@ -39,15 +40,33 @@ const AllProjects = () => {
     const displayedProjects = projects.slice(0, page * PROJECTS_PER_PAGE);
     const hasMore = displayedProjects.length < projects.length;
 
-    const handleLike = (title: string) => {
-        // In a real app this would call the API
-        setProjects((prev) =>
-            prev.map((project) =>
-                project.title === title
-                    ? { ...project, likes: project.likes + 1 }
-                    : project
-            )
-        );
+    const handleLike = async (title: string) => {
+        try {
+            const baseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? "" : "http://localhost:8000");
+            const response = await fetch(`${baseUrl}/api/projects/like`, {
+                method: "POST",
+                headers: getAuthHeaders(),
+                body: JSON.stringify({ project_title: title })
+            });
+
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.detail || "Failed to like project");
+
+            setProjects((prev) =>
+                prev.map((project) =>
+                    project.title === title
+                        ? { ...project, likes: data.total_likes }
+                        : project
+                )
+            );
+            
+            if (selectedProject?.title === title) {
+                setSelectedProject((prev) => prev ? { ...prev, likes: data.total_likes } : null);
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Something went wrong liking the project.");
+        }
     };
 
     return (
@@ -158,10 +177,6 @@ const AllProjects = () => {
                 onLike={() => {
                     if (selectedProject) {
                         handleLike(selectedProject.title);
-                        setSelectedProject({
-                            ...selectedProject,
-                            likes: selectedProject.likes + 1
-                        });
                     }
                 }}
             />

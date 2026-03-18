@@ -26,6 +26,7 @@ app.include_router(auth.router)
 @app.get("/api/search")
 async def search_api(q: str = Query("")):
     try:
+        import database
         results = search_projects(q)
         
         # Format the Payload so JSON serialization works smoothly
@@ -33,11 +34,19 @@ async def search_api(q: str = Query("")):
         for hit in results:
             payload = hit.payload or {}
             score = getattr(hit, 'score', 0.0)
+            
+            title = payload.get("title", "Unknown Project")
+            
+            # Get likes from local database
+            likes_count = database.get_project_likes(title)
+            if likes_count == 0:
+                likes_count = payload.get("likes", 0)
+                
             formatted_results.append({
-                "title": payload.get("title", "Unknown Project"),
+                "title": title,
                 "description": payload.get("summary", ""),
                 "category": payload.get("category", "Electronics"), # Fallback category
-                "likes": payload.get("likes", 0),  
+                "likes": likes_count,  
                 "color": payload.get("color", "hsl(28 90% 55%)"), # Nodaro primary color fallback
                 "score": float(score),
                 "link": payload.get("link", "#")

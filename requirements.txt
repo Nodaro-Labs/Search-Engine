@@ -19,3 +19,9 @@ flask
 flask-cors
 python-dotenv
 google-genai
+
+# Postgres drivers & ORM
+psycopg2-binary
+asyncpg
+sqlalchemy
+sqlmodel
