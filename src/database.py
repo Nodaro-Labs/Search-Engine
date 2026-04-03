@@ -83,4 +83,7 @@ def get_user_likes(user_token):
     conn.close()
     return liked_projects
 
-init_db()
+try:
+    init_db()
+except Exception as e:
+    print(f"Warning: Could not initialize database: {e}")
